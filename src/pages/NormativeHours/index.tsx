@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Container } from './styles';
 
-const Dashboard: React.FC = () => {
+const NormativeHours: React.FC = () => {
   return (
     <Container></Container>
   );
 }
 
-export default Dashboard;
+export default NormativeHours;
