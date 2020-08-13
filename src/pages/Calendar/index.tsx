@@ -4,7 +4,8 @@ import { Container } from './styles';
 
 const Calendar: React.FC = () => {
   return (
-    <Container></Container>
+    <Container>
+    </Container>
   );
 }
 

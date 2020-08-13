@@ -1,10 +1,14 @@
 import React from 'react';
 
-import Dashboard from './pages/Dashboard';
+import Routes from './routes';
+import GlobalStyle from './styles/global';
 
 function App() {
   return (
-    <Dashboard />
+    <>
+      <Routes />
+      <GlobalStyle />
+    </>
   );
 }
 
