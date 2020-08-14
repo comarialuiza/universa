@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Semester from '../../components/Semester';
-import { Container, SubjectsContainer } from './styles';
+import { Container, SemesterContainer } from './styles';
 
 import subjectsMock from './subjectsMockData';
 
@@ -9,7 +9,8 @@ interface Subject {
     title: string;
     code: string;
     teacher: string;
-    overallGrade: number;
+    grade: number;
+    frequency: number;
     status: string;
 }
 
@@ -25,11 +26,11 @@ interface Semesters {
 const Subjects: React.FC = () => {
     return (
         <Container>
-            <SubjectsContainer>
+            <SemesterContainer>
                 { subjectsMock.map((semester: SemesterData) => (
                     <Semester semester={ semester }/>
                 )) }
-            </SubjectsContainer>
+            </SemesterContainer>
         </Container>
     );
 }

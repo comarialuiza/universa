@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Container, SubjectsContainer } from './styles';
 
 import Subject from '../Subject';
 
@@ -8,7 +8,8 @@ interface SubjectData {
     title: string;
     code: string;
     teacher: string;
-    overallGrade: number;
+    grade: number;
+    frequency: number;
     status: string;
 }
 
@@ -23,13 +24,15 @@ interface Props {
 
 const Semester: React.FC<Props> = ({ semester }) => {
     return (
-        <div>
+        <Container>
             <p>Semestre: { semester.semesterNumber }</p>
 
-            { semester.subjects.map((subject: SubjectData) => (
-                <Subject subject={ subject } />
-            )) }
-        </div>
+            <SubjectsContainer>
+                { semester.subjects.map((subject: SubjectData) => (
+                    <Subject subject={ subject } />
+                )) }
+            </SubjectsContainer>
+        </Container>
     );
 }
 

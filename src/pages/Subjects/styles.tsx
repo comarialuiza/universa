@@ -4,8 +4,6 @@ export const Container = styled.div`
     padding: 40px;
 `;
 
-export const SubjectsContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 1.8rem;
+export const SemesterContainer = styled.div`
+    
 `;

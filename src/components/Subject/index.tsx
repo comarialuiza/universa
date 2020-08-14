@@ -6,7 +6,8 @@ interface Subject {
     title: string;
     code: string;
     teacher: string;
-    overallGrade: number;
+    grade: number;
+    frequency: number;
     status: string;
 }
 
@@ -22,7 +23,8 @@ const Subject: React.FC<Props> = ({ subject }) => {
                 <span>{ subject.code }</span>
             </Title>
             <p>{ subject.teacher }</p>
-            <span>{ subject.overallGrade }</span>
+            <p>Nota: { subject.grade }</p>
+            <p>Frequência: { subject.frequency }%</p>
         </Container>
     );
 }

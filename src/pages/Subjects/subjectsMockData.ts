@@ -6,35 +6,41 @@ const subjectsMock = [
                 title: 'Introdução à Expressão Gráfica',
                 code: 'CEG301',
                 teacher: 'Emilly Martins Goncalves',
-                overallGrade: 80,
+                grade: 80,
+                frequency: 70,
                 status: 'approved',
+
             },
             {
                 title: 'Geometria Descritiva I',
                 code: 'CEG303',
                 teacher: 'Yasmin Lima Almeida',
-                overallGrade: 55,
+                grade: 55,
+                frequency: 90,
                 status: 'danger'
             },
             {
                 title: 'Desenho Geométrico I',
                 code: 'CEG302',
                 teacher: 'Isabelle Araujo Fernandes',
-                overallGrade: 90,
+                grade: 90,
+                frequency: 95,
                 status: 'approved'
             },
             {
                 title: 'Representação Gráfica I',
                 code: 'CEG307',
                 teacher: 'Tomás Oliveira Dias',
-                overallGrade: 100,
+                grade: 100,
+                frequency: 100,
                 status: 'approved'
             },
             {
                 title: 'Composição I',
                 code: 'CEG309',
                 teacher: 'Davi Souza Santos',
-                overallGrade: 40,
+                grade: 40,
+                frequency: 50,
                 status: 'failed'
             },
         ]
@@ -46,7 +52,8 @@ const subjectsMock = [
                 title: 'Introdução à Expressão Gráfica',
                 code: 'CEG301',
                 teacher: 'Joaquina Estefina',
-                overallGrade: 80,
+                grade: 80,
+                frequency: 60,
                 status: 'approved',
             },
         ]
