@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
         --color-box-base: #FFFFFF;
         --color-box-footer: #FAFAFC;
 
-        font-size: 60%;
+        font-size: 62.5%;
     }
 
     * {
