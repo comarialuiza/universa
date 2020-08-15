@@ -3,7 +3,7 @@ import React from 'react';
 import Semester from '../../components/Semester';
 import { Container, SemesterContainer } from './styles';
 
-import subjectsMock from './subjectsMockData';
+import subjectsMock from '../../utils/subjectsMockData';
 
 interface Subject {
     title: string;

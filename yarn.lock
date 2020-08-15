@@ -1679,6 +1679,14 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
+"@types/react-big-calendar@^0.24.5":
+  version "0.24.5"
+  resolved "https://registry.yarnpkg.com/@types/react-big-calendar/-/react-big-calendar-0.24.5.tgz#1988f61ba200fb44035eb2746d3ea59bb1c8a3cd"
+  integrity sha512-IeWfrHU12IXOcU/GngMbLQXGmEaYotXT4nFS1efz9NNPEf/IEmY3bSbea2K8iuc4puDdWXgzQAyKhJ8xnixIyA==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/react" "*"
+
 "@types/react-dom@*", "@types/react-dom@^16.9.0":
   version "16.9.8"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.9.8.tgz#fe4c1e11dfc67155733dfa6aa65108b4971cb423"
@@ -6448,6 +6456,11 @@ js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
+js-year-calendar@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/js-year-calendar/-/js-year-calendar-1.0.2.tgz#eb60df6591b2543520b76245f158ad7e9b2915f2"
+  integrity sha512-ayHH/vE7xuXgGCprhQ23REbp3Rb2fy1rXO8jA26Wmuw4vYJ/TTIgFxFuNAlNPL8WR4tNXfnG41nlH3p+hjFesg==
+
 jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
@@ -7166,7 +7179,7 @@ mkdirp@^0.5.1, mkdirp@^0.5.3, mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.5"
 
-moment@^2.24.0, moment@^2.25.3:
+moment@^2.24.0, moment@^2.25.3, moment@^2.27.0:
   version "2.27.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.27.0.tgz#8bff4e3e26a236220dfe3e36de756b6ebaa0105d"
   integrity sha512-al0MUK7cpIcglMv3YF13qSgdAIqxHTO7brRtaz3DlSULbqfazqkc5kEjNrLDOM7fsjshoFIihnU8snrP7zUvhQ==
@@ -9234,6 +9247,13 @@ rc-virtual-list@^1.1.0, rc-virtual-list@^1.1.2:
     classnames "^2.2.6"
     raf "^3.4.1"
     rc-util "^5.0.0"
+
+rc-year-calendar@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/rc-year-calendar/-/rc-year-calendar-1.0.2.tgz#726480d1010edc8fd03032b210dc3f155ba2ae9e"
+  integrity sha512-TdEHZ4hs3WEuEAAmX/HEWlK7EZwhACkpuJKdkxL360igekuQDguyXTC9RuDFdk6lv4CAT7L4d4D6PTP7zUMBlQ==
+  dependencies:
+    js-year-calendar "^1.0.2"
 
 react-app-polyfill@^1.0.6:
   version "1.0.6"

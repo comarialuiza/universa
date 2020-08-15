@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, NormativeHoursContainer, HoursSum } from './styles';
 import Normative from '../../components/Normative';
 
-import normativeHoursMock from './normativeHoursMockData';
+import normativeHoursMock from '../../utils/normativeHoursMockData';
 
 const NormativeHours: React.FC = () => {
   const [ normativeSum, setNormativeSum ] = useState(0);
