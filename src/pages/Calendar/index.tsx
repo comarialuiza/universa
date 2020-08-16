@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Calendar from 'rc-year-calendar';
+import moment from 'moment';
 
 import dataSource from '../../utils/calendarMockData';
 
@@ -27,6 +28,7 @@ const CalendarContainer: React.FC = () => {
 
       { dataSource.map((event: Event) => (
         <div>
+          <span>{ moment(event.startDate).format('L') } - { moment(event.endDate).format('L') }</span>
           <p>{ event.name }</p>
         </div>
       )) }
