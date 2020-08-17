@@ -4,11 +4,11 @@ import Semester from '../../components/Semester';
 import { Container, SemesterContainer } from './styles';
 
 import subjectsMock from '../../utils/subjectsMockData';
-
 interface Subject {
     title: string;
     code: string;
     teacher: string;
+    hours: number;
     grade: number;
     frequency: number;
     status: string;
@@ -16,6 +16,7 @@ interface Subject {
 
 interface SemesterData {
     semesterNumber: number;
+    active: boolean;
     subjects: Array<Subject>;
 }
 

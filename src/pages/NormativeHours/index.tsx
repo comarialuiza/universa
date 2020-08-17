@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from 'antd';
 
 import { Container, NormativeHoursContainer, HoursSum } from './styles';
 import Normative from '../../components/Normative';
@@ -28,6 +29,9 @@ const NormativeHours: React.FC = () => {
           <Normative normative={ normativeHour }/>
         )) }
       </NormativeHoursContainer>
+      <Button type="primary">
+        Adicionar Hora Normativa
+      </Button>
     </Container>
   );
 }

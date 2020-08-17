@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Calendar from 'rc-year-calendar';
 import moment from 'moment';
 
@@ -14,10 +14,6 @@ interface Event {
 
 const CalendarContainer: React.FC = () => {
   const [ language ] = useState('pt');
-
-  useEffect(() => {
-    console.log(dataSource[0].startDate);
-  }, []);
 
   return (
     <Container>

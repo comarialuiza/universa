@@ -8,6 +8,7 @@ interface SubjectData {
     title: string;
     code: string;
     teacher: string;
+    hours: number;
     grade: number;
     frequency: number;
     status: string;

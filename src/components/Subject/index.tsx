@@ -1,4 +1,5 @@
 import React from 'react';
+import { Statistic, Row, Col, Badge } from 'antd';
 
 import { Container, Title } from './styles';
 
@@ -6,6 +7,7 @@ interface Subject {
     title: string;
     code: string;
     teacher: string;
+    hours: number;
     grade: number;
     frequency: number;
     status: string;
@@ -17,15 +19,23 @@ interface Props {
 
 const Subject: React.FC<Props> = ({ subject }) => {
     return (
-        <Container>
+        <Badge.Ribbon text={ subject.code }>
+        <Container status={ subject.status } >
             <Title>
                 <h3>{ subject.title }</h3>
-                <span>{ subject.code }</span>
             </Title>
-            <p>{ subject.teacher }</p>
-            <p>Nota: { subject.grade }</p>
-            <p>Frequência: { subject.frequency }%</p>
+            <p>Professor(a): { subject.teacher }</p>
+
+            <Row gutter={16}>
+                <Col span={12}>
+                    <Statistic title="Nota" value={ subject.grade } suffix="/ 100" />
+                </Col>
+                <Col span={12}>
+                    <Statistic title="Frequência" value={ subject.frequency } suffix="/ 100" />
+                </Col>
+            </Row>
         </Container>
+        </Badge.Ribbon>
     );
 }
 

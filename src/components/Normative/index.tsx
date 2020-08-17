@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'antd';
 
 import { Container } from './styles';
 
@@ -17,8 +18,8 @@ const Normative: React.FC<Props> = ({ normative }) => {
     return (
         <Container key={ normative.id }>
             <h3>{ normative.title }</h3>
-            <p>{ normative.hours }</p>
-            <button>Ver certificado</button>
+            <p>Horas: { normative.hours }</p>
+            <Button>Ver certificado</Button>
         </Container>
     );
 }
