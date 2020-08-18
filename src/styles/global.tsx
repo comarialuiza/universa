@@ -42,12 +42,6 @@ const GlobalStyle = createGlobalStyle`
         background: var(--color-background);
     }
 
-    #root {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     body, input, button, textarea {
         font: 300 1.6rem 'Source Sans Pro', sans-serif;
         color: var(--color-text-base);

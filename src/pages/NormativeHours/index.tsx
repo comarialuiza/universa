@@ -3,6 +3,7 @@ import { Button } from 'antd';
 
 import { Container, NormativeHoursContainer, HoursSum } from './styles';
 import Normative from '../../components/Normative';
+import Header from '../../components/Header';
 
 import normativeHoursMock from '../../utils/normativeHoursMockData';
 
@@ -20,19 +21,22 @@ const NormativeHours: React.FC = () => {
   }, [ normativeTotal ]);
 
   return (
-    <Container>
-      <HoursSum>
-        Somatório das horas normativas: <span>{ normativeSum }</span>
-      </HoursSum>
-      <NormativeHoursContainer>
-        { normativeHoursMock.map(normativeHour => (
-          <Normative normative={ normativeHour }/>
-        )) }
-      </NormativeHoursContainer>
-      <Button type="primary">
-        Adicionar Hora Normativa
-      </Button>
-    </Container>
+    <>
+      <Header />
+      <Container>
+        <HoursSum>
+          Somatório das horas normativas: <span>{ normativeSum }</span>
+        </HoursSum>
+        <Button type="primary">
+          Adicionar Hora Normativa
+        </Button>
+        <NormativeHoursContainer>
+          { normativeHoursMock.map(normativeHour => (
+            <Normative normative={ normativeHour }/>
+          )) }
+        </NormativeHoursContainer>
+      </Container>
+    </>
   );
 }
 

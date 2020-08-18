@@ -2,6 +2,7 @@ import React from 'react';
 
 import Semester from '../../components/Semester';
 import { Container, PerformanceContainer } from './styles';
+import Header from '../../components/Header';
 
 import subjectsMock from '../../utils/subjectsMockData';
 
@@ -23,13 +24,16 @@ interface SemesterData {
 
 const Performance: React.FC = () => {
   return (
-    <Container>
-      <PerformanceContainer>
-        { subjectsMock.filter(status => status.active === true).map((semester: SemesterData) => (
-            <Semester semester={ semester }/>
-        )) }
-      </PerformanceContainer>
-    </Container>
+    <>
+      <Header />
+      <Container>
+        <PerformanceContainer>
+          { subjectsMock.filter(status => status.active === true).map((semester: SemesterData) => (
+              <Semester semester={ semester }/>
+          )) }
+        </PerformanceContainer>
+      </Container>
+    </>
   );
 }
 
