@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
     text-align: center;
@@ -19,6 +19,10 @@ export const Navigation = styled.nav`
     padding: 5px;
 `;
 
-export const NavigationLink = styled(Link)`
+export const NavigationLink = styled(NavLink)`
     padding: 5px;
+
+    &&.activeLink {
+        background-color: red;
+    }
 `;
