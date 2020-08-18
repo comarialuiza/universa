@@ -21,6 +21,11 @@ export const Navigation = styled.nav`
 
 export const NavigationLink = styled(NavLink)`
     padding: 5px;
+    margin: 0 15px;
+
+    svg {
+        margin-right: 8px;
+    }
 
     &&.activeLink {
         background-color: red;

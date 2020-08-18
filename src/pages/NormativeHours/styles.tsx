@@ -1,7 +1,12 @@
 import styled from 'styled-components';
+import { Button } from 'antd';
 
 export const Container = styled.div`
     padding: 40px;
+`;
+
+export const SubmitButton = styled(Button)`
+    margin-bottom: 20px;
 `;
 
 export const NormativeHoursContainer = styled.div`

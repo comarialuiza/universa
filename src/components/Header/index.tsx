@@ -6,14 +6,6 @@ import { Container, Title, Welcome, Navigation, NavigationLink } from './styles'
 const Header: React.FC = () => {
     const [ user ] = useState('Maria Luiza');
 
-    const [visible, setVisible] = useState(true);
-    const showDrawer = () => {
-        setVisible(true);
-    };
-    const onClose = () => {
-        setVisible(false);
-    };
-
     return (
         <Container>
             <Welcome>Olá { user }, bem vindo/a ao</Welcome>
