@@ -29,7 +29,7 @@ const Subjects: React.FC = () => {
     return (
         <>
             <Header />
-            <Container>
+            <Container className="container">
                 <SemesterContainer>
                     { subjectsMock.map((semester: SemesterData) => (
                         <Semester semester={ semester }/>

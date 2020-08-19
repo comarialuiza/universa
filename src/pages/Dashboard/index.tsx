@@ -8,15 +8,12 @@ const Dashboard: React.FC = () => {
   return (
     <>
       <Header />
-      <Container>
+      <Container className="container">
         <SubContainer>
           <Title>Progresso acadêmico</Title>
           <Progress
-            strokeColor={{
-              '0%': '#9871F5',
-              '100%': '#FFBE0B',
-            }}
-            percent={ 25 }
+            strokeColor='#f1833b'
+            percent={ 75 }
           />
         </SubContainer>
 

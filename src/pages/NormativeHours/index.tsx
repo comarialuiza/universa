@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, Modal, Form, Input } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 
-import { Container, NormativeHoursContainer, HoursSum, SubmitButton } from './styles';
+import { Container, NormativeHoursContainer, HoursSum, SubmitButton, NormativeHeader } from './styles';
 import Normative from '../../components/Normative';
 import Header from '../../components/Header';
 
@@ -40,13 +40,15 @@ const NormativeHours: React.FC = () => {
   return (
     <>
       <Header />
-      <Container>
-        <HoursSum>
-          Somatório das horas normativas: <span>{ normativeSum }</span>
-        </HoursSum>
-        <SubmitButton type="primary" onClick={ showModal }>
-          Adicionar Hora Normativa
-        </SubmitButton>
+      <Container className="container">
+        <NormativeHeader>
+          <HoursSum>
+            Somatório das horas normativas: <span>{ normativeSum }</span>
+          </HoursSum>
+          <SubmitButton type="primary" onClick={ showModal }>
+            Adicionar Hora Normativa
+          </SubmitButton>
+        </NormativeHeader>
 
         <Modal
           title="Adicionar hora normativa"

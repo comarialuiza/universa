@@ -29,7 +29,7 @@ const Header: React.FC = () => {
 
                 <NavigationLink activeClassName="activeLink" to="/performance">
                     <LineChartOutlined />
-                    Performance Semestral
+                    Performance
                 </NavigationLink>
 
                 <NavigationLink activeClassName="activeLink" to="/subjects">

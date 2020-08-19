@@ -22,7 +22,7 @@ const CalendarContainer: React.FC = () => {
   return (
     <>
       <Header />
-      <Container>
+      <Container className="container">
         <Button onClick={ () => setWeeks(15) }>Para cursos de 15 semanas</Button>
         <Button onClick={ () => setWeeks(18) }>Para cursos de 18 semanas</Button>
 

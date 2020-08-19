@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     padding: 20px;
     border-radius: 8px;
-    background-color: var(--color-box-base);
+    background-color: var(--color-white);
 
     @media (max-width: 480px) {
         margin-bottom: 1.8rem;

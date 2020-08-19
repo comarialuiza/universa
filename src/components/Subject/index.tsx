@@ -1,7 +1,7 @@
 import React from 'react';
-import { Statistic, Row, Col, Badge } from 'antd';
+import { Statistic, Row, Col } from 'antd';
 
-import { Container, Title } from './styles';
+import { Container, Title, CodeFlag } from './styles';
 
 interface Subject {
     title: string;
@@ -19,12 +19,13 @@ interface Props {
 
 const Subject: React.FC<Props> = ({ subject }) => {
     return (
-        <Badge.Ribbon text={ subject.code }>
         <Container status={ subject.status }>
             <Title>
                 { subject.title }
             </Title>
             <p>Professor(a): { subject.teacher }</p>
+
+            <CodeFlag>{ subject.code }</CodeFlag>
 
             <Row gutter={16}>
                 <Col span={12}>
@@ -35,7 +36,6 @@ const Subject: React.FC<Props> = ({ subject }) => {
                 </Col>
             </Row>
         </Container>
-        </Badge.Ribbon>
     );
 }
 

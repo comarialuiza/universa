@@ -6,7 +6,9 @@ export const Container = styled.div`
 `;
 
 export const SubmitButton = styled(Button)`
-    margin-bottom: 20px;
+    background-color: var(--color-secondary);
+    border: var(--color-secondary);
+    border-radius: 8px;
 `;
 
 export const NormativeHoursContainer = styled.div`
@@ -18,15 +20,24 @@ export const NormativeHoursContainer = styled.div`
 
     @media (min-width: 990px) {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 1.8rem;
     }
 `;
 
 export const HoursSum = styled.p`
-    margin-bottom: 30px;
+    font-size: 16px;
 
     span {
         font-weight: 500;
+        color: var(--color-primary);
+        font-size: 20px;
     }
+`;
+
+export const NormativeHeader = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
 `;
