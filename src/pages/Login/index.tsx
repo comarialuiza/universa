@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Input, Button } from 'antd';
 import { useHistory } from 'react-router-dom';
 
-import { Container, Title } from './styles';
+import { Container, Title, FormContainer } from './styles';
 
 const Login: React.FC = () => {
   const history = useHistory();
@@ -15,7 +15,7 @@ const Login: React.FC = () => {
     <Container>
       <Title>Universa</Title>
 
-      <Form
+      <FormContainer
         layout="vertical"
         name="basic"
         onFinish={ handleLogin }
@@ -41,7 +41,7 @@ const Login: React.FC = () => {
             Logar
           </Button>
         </Form.Item>
-      </Form>
+      </FormContainer>
     </Container>
   );
 }

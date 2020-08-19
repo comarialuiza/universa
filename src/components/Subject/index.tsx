@@ -20,9 +20,9 @@ interface Props {
 const Subject: React.FC<Props> = ({ subject }) => {
     return (
         <Badge.Ribbon text={ subject.code }>
-        <Container status={ subject.status } >
+        <Container status={ subject.status }>
             <Title>
-                <h3>{ subject.title }</h3>
+                { subject.title }
             </Title>
             <p>Professor(a): { subject.teacher }</p>
 

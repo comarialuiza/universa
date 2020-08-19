@@ -1,7 +1,7 @@
 import React from 'react';
 import { Progress } from 'antd';
 
-import { Container, ProgressTitle, SubContainer } from './styles';
+import { Container, Title, SubContainer } from './styles';
 import Header from '../../components/Header';
 
 const Dashboard: React.FC = () => {
@@ -10,14 +10,18 @@ const Dashboard: React.FC = () => {
       <Header />
       <Container>
         <SubContainer>
-          <ProgressTitle>Progresso acadêmico</ProgressTitle>
+          <Title>Progresso acadêmico</Title>
           <Progress
             strokeColor={{
-              '0%': '#108ee9',
-              '100%': '#87d068',
+              '0%': '#9871F5',
+              '100%': '#FFBE0B',
             }}
             percent={ 25 }
           />
+        </SubContainer>
+
+        <SubContainer>
+          <Title>Dias até o fim do semestre</Title>
         </SubContainer>
       </Container>
     </>

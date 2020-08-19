@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 
-import { Container } from './styles';
+import { Container, Title } from './styles';
 
 interface NormativeHour {
     id: number;
@@ -17,7 +17,7 @@ interface Props {
 const Normative: React.FC<Props> = ({ normative }) => {
     return (
         <Container key={ normative.id }>
-            <h3>{ normative.title }</h3>
+            <Title>{ normative.title }</Title>
             <p>Horas: { normative.hours }</p>
             <Button>Ver certificado</Button>
         </Container>
