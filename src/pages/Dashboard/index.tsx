@@ -1,6 +1,8 @@
 import React from 'react';
 import { Progress } from 'antd';
 
+import Overview from '../../components/Overview';
+
 import { Container, Title, SubContainer, Description, SubTitle } from './styles';
 import Header from '../../components/Header';
 
@@ -33,6 +35,10 @@ const Dashboard: React.FC = () => {
 
           <SubTitle>Período Atual</SubTitle>
           <Description>7</Description>
+        </SubContainer>
+
+        <SubContainer>
+          <Overview />
         </SubContainer>
       </Container>
     </>

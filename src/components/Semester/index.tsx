@@ -21,16 +21,17 @@ interface Semester {
 
 interface Props {
     semester: Semester;
+    parent: string;
 }
 
-const Semester: React.FC<Props> = ({ semester }) => {
+const Semester: React.FC<Props> = ({ semester, parent }) => {
     return (
         <Container>
             <p>Semestre: { semester.semesterNumber }</p>
 
-            <SubjectsContainer>
+            <SubjectsContainer type={ parent }>
                 { semester.subjects.map((subject: SubjectData) => (
-                    <Subject subject={ subject } />
+                    <Subject subject={ subject } parent={ parent }/>
                 )) }
             </SubjectsContainer>
         </Container>

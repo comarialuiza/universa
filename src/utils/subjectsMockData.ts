@@ -287,16 +287,45 @@ const subjectsMock = [
     },
     {
         semesterNumber: 6,
-        active: false,
+        active: true,
         subjects: [
             {
                 title: 'Tratamento e Edição de Imagem',
                 code: 'CEG312',
                 teacher: chance.name(),
                 hours: 45,
-                grade: 80,
+                grade: 91,
                 frequency: 60,
-                status: 'approved'
+                status: 'approved',
+                tests: [
+                    {
+                        id: 1,
+                        title: 'Prova 1',
+                        grade: 95
+                    },
+                    { 
+                        id: 2,
+                        title: 'Prova 2',
+                        grade: 90
+                    }
+                ], 
+                projects: [
+                    {
+                        id: 1,
+                        title: 'Trabalho sobre Semiótica',
+                        grade: 98
+                    },
+                    { 
+                        id: 2,
+                        title: 'Relatório sobre Photoshop',
+                        grade: 92,
+                    },
+                    {
+                        id: 3,
+                        title: 'Trabalho final da disciplina',
+                        grade: 78
+                    }
+                ]
             },
             {
                 title: 'Projeto de Móveis II',
@@ -347,7 +376,7 @@ const subjectsMock = [
     },
     {
         semesterNumber: 7,
-        active: true,
+        active: false,
         subjects: [
             {
                 title: 'Trabalho de Conclusão de Curso I',

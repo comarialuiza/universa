@@ -29,7 +29,7 @@ const Performance: React.FC = () => {
       <Container className="container">
         <PerformanceContainer>
           { subjectsMock.filter(status => status.active === true).map((semester: SemesterData) => (
-            <Semester semester={ semester }/>
+            <Semester semester={ semester } parent="performance" />
           )) }
         </PerformanceContainer>
       </Container>

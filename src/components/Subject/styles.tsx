@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Container = styled.div<{ status: string }>`
-    /* border-left: 5px solid ${ props => props.status === 'approved' ? 'var(--color-success)' : 'var(--color-error)' }; */
+export const Container = styled.div<{ type: string }>`
     border-left: 5px solid var(--color-primary);
     border-radius: 8px;
     padding: 30px 20px 20px;
     background-color: var(--color-white);
     position: relative;
+    margin-bottom: ${ props => props.type === 'subjects' ? '0px' : '30px' };
 `;
 
 export const Title = styled.h3`
