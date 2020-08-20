@@ -13,3 +13,7 @@ export const SubContainer = styled.div`
     border-radius: 8px;
     background-color: var(--color-white);
 `;
+
+export const SubTitle = styled.h4``;
+
+export const Description = styled.p``;

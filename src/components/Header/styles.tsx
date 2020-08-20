@@ -18,7 +18,7 @@ export const HeaderContainer = styled.div``;
 
 export const Title = styled.h1`
     font-family: Megrim;
-    font-size: 40px;
+    font-size: 50px;
     color: var(--color-primary);
 `;
 
@@ -57,4 +57,15 @@ export const NavigationLink = styled(NavLink)`
             color: var(--color-button-text);
         }
     }
+`;
+
+export const User = styled.div<{ image: string }>`
+    height: 60px;
+    width: 60px;
+    display: block;
+    background: url(${ props => props.image });
+    background-position: center;
+    background-size: 70px;
+    border-radius: 50%;
+    border: 5px solid var(--color-primary);
 `;

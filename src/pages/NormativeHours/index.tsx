@@ -45,7 +45,7 @@ const NormativeHours: React.FC = () => {
           <HoursSum>
             Somatório das horas normativas: <span>{ normativeSum }</span>
           </HoursSum>
-          <SubmitButton type="primary" onClick={ showModal }>
+          <SubmitButton onClick={ showModal }>
             Adicionar Hora Normativa
           </SubmitButton>
         </NormativeHeader>

@@ -12,11 +12,16 @@ export const Container = styled.div<{ status: string }>`
 export const Title = styled.h3`
     height: 46px;
     overflow: hidden;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-size: 1.5rem;
     font-weight: 500;
     font-size: 18px;
     color: var(--color-text-title);
+`;
+
+export const Teacher = styled.p`
+    color: var(--color-text-complement);
+    font-size: 15px;
 `;
 
 export const CodeFlag = styled.span`
@@ -27,4 +32,5 @@ export const CodeFlag = styled.span`
     background-color: var(--color-secondary);
     font-size: 13px;
     color: var(--color-title-in-primary);
+    border-radius: 4px;
 `;

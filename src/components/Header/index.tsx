@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PieChartOutlined, CalendarOutlined, ClockCircleOutlined, LineChartOutlined, BookOutlined, ProjectOutlined, FormOutlined, RiseOutlined } from '@ant-design/icons';
 
-import { Container, Title, Welcome, Navigation, NavigationLink, HeaderContainer } from './styles';
+import { Container, Title, Welcome, Navigation, NavigationLink, HeaderContainer, User } from './styles';
 
 const Header: React.FC = () => {
     const [ user ] = useState('Maria Luiza');
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
                 </NavigationLink>
             </Navigation>
 
-            
+            <User image="https://images.unsplash.com/photo-1597605706583-c1d11586d209"/>
         </Container>
     );
 }

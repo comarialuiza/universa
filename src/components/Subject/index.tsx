@@ -1,7 +1,7 @@
 import React from 'react';
 import { Statistic, Row, Col } from 'antd';
 
-import { Container, Title, CodeFlag } from './styles';
+import { Container, Title, CodeFlag, Teacher } from './styles';
 
 interface Subject {
     title: string;
@@ -23,7 +23,7 @@ const Subject: React.FC<Props> = ({ subject }) => {
             <Title>
                 { subject.title }
             </Title>
-            <p>Professor(a): { subject.teacher }</p>
+            <Teacher>Professor(a): { subject.teacher }</Teacher>
 
             <CodeFlag>{ subject.code }</CodeFlag>
 

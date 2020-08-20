@@ -1,13 +1,16 @@
 import styled from 'styled-components';
-import { Button } from 'antd';
 
 export const Container = styled.div`
 `;
 
-export const SubmitButton = styled(Button)`
+export const SubmitButton = styled.button`
     background-color: var(--color-secondary);
-    border: var(--color-secondary);
     border-radius: 8px;
+    color: var(--color-input-background);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    border: 0;
 `;
 
 export const NormativeHoursContainer = styled.div`

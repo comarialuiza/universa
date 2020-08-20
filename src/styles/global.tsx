@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     :root {
@@ -78,6 +78,45 @@ const GlobalStyle = createGlobalStyle`
             font-size: 62.5%;
         }
     }
+`;
+
+export const UnavailableContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+
+    svg {
+        font-size: 60px;
+        margin-bottom: 20px;
+        color: var(--color-primary);
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+        color: var(--color-tertiary);
+    }
+
+    p {
+        color: var(--color-text-complement);
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+
+        @media (min-width: 481px) {
+            width: 280px;
+        }
+    }
+`;
+
+export const PageTitle = styled.h2`
+    font-family: Megrim;
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: var(--color-primary);
 `;
 
 export default GlobalStyle;
