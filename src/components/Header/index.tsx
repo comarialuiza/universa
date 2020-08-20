@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import { PieChartOutlined, CalendarOutlined, ClockCircleOutlined, LineChartOutlined, BookOutlined } from '@ant-design/icons';
+import { PieChartOutlined, CalendarOutlined, ClockCircleOutlined, LineChartOutlined, BookOutlined, ProjectOutlined, FormOutlined, RiseOutlined } from '@ant-design/icons';
 
-import { Container, Title, Welcome, Navigation, NavigationLink } from './styles';
+import { Container, Title, Welcome, Navigation, NavigationLink, HeaderContainer } from './styles';
 
 const Header: React.FC = () => {
     const [ user ] = useState('Maria Luiza');
 
     return (
         <Container>
-            <Welcome>Olá { user }, bem vindo/a ao</Welcome>
-            <Title>Universa</Title>
+            <HeaderContainer>
+                <Welcome>Olá { user }, bem vindo/a ao</Welcome>
+                <Title>Universa</Title>
+            </HeaderContainer>
 
             <Navigation>
                 <NavigationLink activeClassName="activeLink" exact to="/">
@@ -17,24 +19,39 @@ const Header: React.FC = () => {
                     Informações Gerais
                 </NavigationLink>
 
-                <NavigationLink activeClassName="activeLink" to="/calendar">
+                <NavigationLink activeClassName="activeLink" to="/calendario">
                     <CalendarOutlined />
                     Calendário
                 </NavigationLink>
 
-                <NavigationLink activeClassName="activeLink" to="/normativehours">
-                    <ClockCircleOutlined />
+                <NavigationLink activeClassName="activeLink" to="/horasnormativas">
+                    <ProjectOutlined />
                     Horas Normativas
                 </NavigationLink>
 
-                <NavigationLink activeClassName="activeLink" to="/performance">
+                <NavigationLink activeClassName="activeLink" to="/semestreatual">
                     <LineChartOutlined />
-                    Performance
+                    Semestre Atual
                 </NavigationLink>
 
-                <NavigationLink activeClassName="activeLink" to="/subjects">
+                <NavigationLink activeClassName="activeLink" to="/disciplinas">
                     <BookOutlined />
                     Disciplinas
+                </NavigationLink>
+
+                <NavigationLink activeClassName="activeLink" to="/matricula">
+                    <FormOutlined />
+                    Matrícula
+                </NavigationLink>
+
+                <NavigationLink activeClassName="activeLink" to="/relatorios">
+                    <RiseOutlined />
+                    Relatórios
+                </NavigationLink>
+
+                <NavigationLink activeClassName="activeLink" to="/horarios">
+                    <ClockCircleOutlined />
+                    Horários
                 </NavigationLink>
             </Navigation>
 

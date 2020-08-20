@@ -70,6 +70,7 @@ const GlobalStyle = createGlobalStyle`
         background: var(--color-background);
         border-radius: 0 20px 20px 0;
         overflow: scroll;
+        padding: 40px;
     }
 
     @media (min-width: 700px) {

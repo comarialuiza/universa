@@ -10,9 +10,11 @@ export const Container = styled.header`
     
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: space-between;
+    justify-content: space-around;
+    align-items: flex-start;
 `;
+
+export const HeaderContainer = styled.div``;
 
 export const Title = styled.h1`
     font-family: Megrim;
@@ -34,7 +36,7 @@ export const Navigation = styled.nav`
 
 export const NavigationLink = styled(NavLink)`
     padding: 10px 12px;
-    margin: 8px 0;
+    margin: 6px 0;
     border-radius: 8px;
     color: var(--color-primary);
 
