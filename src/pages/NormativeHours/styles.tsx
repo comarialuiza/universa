@@ -23,7 +23,7 @@ export const NormativeHoursContainer = styled.div`
     @media (min-width: 990px) {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 1.8rem;
+        grid-gap: 30px;
     }
 `;
 

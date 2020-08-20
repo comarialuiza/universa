@@ -5,7 +5,7 @@ import { UnavailableContainer } from '../../styles/global';
 import { Container, AvailableContainer } from './styles';
 
 const Schedule: React.FC = () => {
-    const [ semesterActive, setSemesterActive ] = useState(false);
+    const [ semesterActive ] = useState(false);
 
     return (
         <>

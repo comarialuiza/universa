@@ -297,7 +297,7 @@ const subjectsMock = [
                 grade: 91,
                 frequency: 60,
                 status: 'approved',
-                tests: [
+                gradeProvider: [
                     {
                         id: 1,
                         title: 'Prova 1',
@@ -307,21 +307,19 @@ const subjectsMock = [
                         id: 2,
                         title: 'Prova 2',
                         grade: 90
-                    }
-                ], 
-                projects: [
+                    },
                     {
-                        id: 1,
+                        id: 3,
                         title: 'Trabalho sobre Semiótica',
                         grade: 98
                     },
                     { 
-                        id: 2,
+                        id: 4,
                         title: 'Relatório sobre Photoshop',
                         grade: 92,
                     },
                     {
-                        id: 3,
+                        id: 5,
                         title: 'Trabalho final da disciplina',
                         grade: 78
                     }

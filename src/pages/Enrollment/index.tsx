@@ -6,7 +6,7 @@ import { Container, AvailableContainer } from './styles';
 import { UnavailableContainer } from '../../styles/global';
 
 const Enrollment: React.FC = () => {
-    const [ enrollmentAvailable, setEnrollmentAvailable ] = useState(false);
+    const [ enrollmentAvailable ] = useState(false);
 
     return (
         <>

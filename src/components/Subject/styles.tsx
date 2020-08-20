@@ -6,7 +6,6 @@ export const Container = styled.div<{ type: string }>`
     padding: 30px 20px 20px;
     background-color: var(--color-white);
     position: relative;
-    margin-bottom: ${ props => props.type === 'subjects' ? '0px' : '30px' };
 `;
 
 export const Title = styled.h3`
@@ -33,4 +32,14 @@ export const CodeFlag = styled.span`
     font-size: 13px;
     color: var(--color-title-in-primary);
     border-radius: 4px;
+`;
+
+export const Grade = styled.p`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+export const GradeContainer = styled.div`
+
 `;

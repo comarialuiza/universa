@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
         --color-tertiary: #726D81;
         --color-title-in-primary: #FFFFFF;
         --color-text-in-primary: #D4C2FF;
-        --color-text-title: #22223B;
+        --color-text-title: #333;
         --color-text-complement: #9C98A6;
         --color-line-in-white: #E6E6F0;
         --color-input-background: #F8F8FC;

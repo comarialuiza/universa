@@ -1,8 +1,13 @@
 import React from 'react';
 import { Statistic, Row, Col } from 'antd';
 
-import { Container, Title, CodeFlag, Teacher } from './styles';
+import { Container, Title, CodeFlag, Teacher, Grade, GradeContainer } from './styles';
 
+interface GradeProvider {
+    id: number;
+    title: string;
+    grade: number;
+}  
 interface Subject {
     title: string;
     code: string;
@@ -11,6 +16,7 @@ interface Subject {
     grade: number;
     frequency: number;
     status: string;
+    gradeProvider?: Array<GradeProvider>;
 }
 
 interface Props {
@@ -38,7 +44,20 @@ const Subject: React.FC<Props> = ({ subject, parent }) => {
                     </Col>
                 </Row>
             ) : (
-                <p>Performance parents</p>
+                <div>
+                    <Grade>
+                        <span>Trabalho/prova</span>
+                        <span>Nota</span>
+                    </Grade>
+                    <GradeContainer>
+                        { subject.gradeProvider && subject.gradeProvider.map((gradeData: GradeProvider) => (
+                            <Grade key={ gradeData.id }>
+                                <span>{ gradeData.title }</span>
+                                <span>{ gradeData.grade }</span>
+                            </Grade>
+                        )) }
+                    </GradeContainer>
+                </div>
             ) }
 
             
