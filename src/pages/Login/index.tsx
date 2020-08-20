@@ -1,8 +1,7 @@
 import React from 'react';
-import { Form, Input, Button } from 'antd';
 import { useHistory } from 'react-router-dom';
 
-import { Container, Title, FormContainer } from './styles';
+import { Container, Title, FormContainer, Label, Input, Button, ButtonContainer } from './styles';
 
 const Login: React.FC = () => {
   const history = useHistory();
@@ -13,34 +12,19 @@ const Login: React.FC = () => {
 
   return (
     <Container>
-      <Title>Universa</Title>
+      <FormContainer>
+        <Title>Universa</Title>
 
-      <FormContainer
-        layout="vertical"
-        name="basic"
-        onFinish={ handleLogin }
-      >
-        <Form.Item
-          label="GRR"
-          name="username"
-          rules={[{ required: true, message: 'Por favor insira seu GRR.' }]}
-        >
-          <Input />
-        </Form.Item>
+        <Label>GRR</Label>
+        <Input type="text" />
 
-        <Form.Item
-          label="Senha"
-          name="password"
-          rules={[{ required: true, message: 'Por favor insira sua senha.' }]}
-        >
-          <Input.Password />
-        </Form.Item>
+        <Label>Senha</Label>
+        <Input type="password" />
 
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Logar
-          </Button>
-        </Form.Item>
+        <ButtonContainer>
+          <Button buttonType="secondary">Esqueci minha senha</Button>
+          <Button onClick={ handleLogin } buttonType="primary">Entrar</Button>
+        </ButtonContainer>
       </FormContainer>
     </Container>
   );
