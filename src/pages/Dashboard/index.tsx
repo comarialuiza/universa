@@ -11,19 +11,7 @@ const Dashboard: React.FC = () => {
     <>
       <Header />
       <Container className="container">
-        <SubContainer>
-          <Title>Progresso acadêmico</Title>
-          <Progress
-            strokeColor='#f1833b'
-            percent={ 75 }
-          />
-        </SubContainer>
-
-        <SubContainer>
-          <Title>Dias até o fim do semestre</Title>
-        </SubContainer>
-
-        <SubContainer>
+        <SubContainer className="generalInfo">
           <SubTitle>Matrícula</SubTitle>
           <Description>GRR20171816</Description>
 
@@ -37,7 +25,19 @@ const Dashboard: React.FC = () => {
           <Description>7</Description>
         </SubContainer>
 
-        <SubContainer>
+        <SubContainer className="progress">
+          <Title>Progresso acadêmico</Title>
+          <Progress
+            strokeColor='#f1833b'
+            percent={ 75 }
+          />
+        </SubContainer>
+
+        <SubContainer className="vacation">
+          <Title>Dias até o fim do semestre</Title>
+        </SubContainer>
+
+        <SubContainer className="overview">
           <Overview />
         </SubContainer>
       </Container>
