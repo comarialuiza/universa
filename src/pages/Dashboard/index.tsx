@@ -40,6 +40,11 @@ const Dashboard: React.FC = () => {
         <SubContainer className="overview">
           <Overview />
         </SubContainer>
+
+        <SubContainer className="ira">
+          <Title>IRA</Title>
+          92.5
+        </SubContainer>
       </Container>
     </>
   );

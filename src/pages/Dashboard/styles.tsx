@@ -6,7 +6,8 @@ export const Container = styled.div`
 	grid-template-rows: 3fr 2fr 2fr 3fr;
 	grid-template-areas:
 		"generalInfo progress vacation"
-		"generalInfo progress overview"
+		"generalInfo progress ira"
+        "overview overview overview"
 	;
     grid-gap: 30px;
 `;
@@ -33,6 +34,10 @@ export const SubContainer = styled.div`
 
     &&.overview {
         grid-area: overview;
+    }
+
+    &&.ira {
+        grid-area: ira;
     }
 `;
 
