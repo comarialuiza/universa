@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { WarningOutlined } from '@ant-design/icons';
+
 import Header from '../../components/Header';
 import { UnavailableContainer } from '../../styles/global';
 import { Container, AvailableContainer } from './styles';
@@ -13,7 +14,7 @@ const Schedule: React.FC = () => {
             <Container className="container">
                 { semesterActive ? (
                     <AvailableContainer>
-
+                        
                     </AvailableContainer>
                 ) : (
                     <UnavailableContainer>

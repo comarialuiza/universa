@@ -10,16 +10,6 @@ export const Container = styled.div`
         "overview overview overview overview"
 	;
     grid-gap: 30px;
-
-    p {
-        font-size: 15px;
-        color: var(--color-text-complement);
-
-        span {
-            color: var(--color-primary);
-            font-weight: 500;
-        }
-    }
 `;
 
 export const Title = styled.h3`
@@ -35,10 +25,24 @@ export const SubContainer = styled.div`
 
     &&.generalInfo {
         grid-area: generalInfo;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 
     &&.progress {
         grid-area: progress;
+
+        p {
+            font-size: 15px;
+            color: var(--color-text-complement);
+
+            span {
+                color: var(--color-primary);
+                font-weight: 500;
+            }
+        }
     }
 
     &&.vacation {
@@ -60,14 +64,30 @@ export const SubContainer = styled.div`
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
+        }
 
-            p {
-                margin-right: 10px;
+        p {
+            margin-right: 10px;
+            font-size: 15px;
+            color: var(--color-text-complement);
+
+            span {
+                color: var(--color-primary);
+                font-weight: 500;
             }
         }
     }
 `;
 
-export const SubTitle = styled.h4``;
+export const SubTitle = styled.h4`
+    color: var(--color-text-complement);
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 300;
+`;
 
-export const Description = styled.p``;
+export const Description = styled.p`
+    font-size: 20px;
+    color: var(--color-text-title);
+    margin: 0;
+`;

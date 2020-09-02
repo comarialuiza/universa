@@ -12,15 +12,25 @@ const Dashboard: React.FC = () => {
       <Header />
       <Container className="container">
         <SubContainer className="generalInfo">
-          <SubTitle>Matrícula</SubTitle>
-          <Description>GRR20171816</Description>
+          <div>
+            <SubTitle>Matrícula</SubTitle>
+            <Description>GRR20171816</Description>
+          </div>
 
-          <SubTitle>Curso</SubTitle>
-          <Description>Curso de Expressão Gráfica - Bacharelado</Description>
+          <div>
+            <SubTitle>Curso</SubTitle>
+            <Description>Curso de Expressão Gráfica - Bacharelado</Description>
+          </div>
 
-          <SubTitle>Período de Matrícula</SubTitle>
-          <Description>Período Especial (1) / 2020</Description>
+          <div>
+            <SubTitle>Período de Matrícula</SubTitle>
+            <Description>Período Especial (1) / 2020</Description>
+          </div>
 
+          <div>
+            <SubTitle>Período Atual</SubTitle>
+            <Description>7</Description>
+          </div>
         </SubContainer>
 
         <SubContainer className="progress">
