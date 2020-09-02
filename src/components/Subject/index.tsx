@@ -1,7 +1,7 @@
 import React from 'react';
 import { Statistic, Progress } from 'antd';
 
-import { Container, Title, CodeFlag, Teacher, StatisticContainer, GradeContainer, InfoContainer, Info } from './styles';
+import { Container, Title, CodeFlag, Teacher, StatisticContainer, GradeContainer, InfoContainer, Info, Button } from './styles';
 import { Table, TableHeader, TableBody, Row } from '../../styles/global';
 
 interface GradeProvider {
@@ -43,6 +43,11 @@ const Subject: React.FC<Props> = ({ subject, parent }) => {
             ) : (
                 <>
                     <Info>
+                        <InfoContainer>
+                            <Button>Entrar em contato com o/a professor(a)</Button>
+                            <Button>Acessar grade currícular</Button>
+                            <Button>Acessar lista de livros e materiais recomendados</Button>
+                        </InfoContainer>
                         <GradeContainer>
                             { subject.gradeProvider && (
                                 <Table>
@@ -59,7 +64,11 @@ const Subject: React.FC<Props> = ({ subject, parent }) => {
                                                     { gradeData.title }
                                                 </th>
                                                 <th>
-                                                    <Progress percent={gradeData.grade} size="small" />
+                                                    <Progress 
+                                                        percent={gradeData.grade} 
+                                                        size="small" 
+                                                        strokeColor={ gradeData.grade < 70 ? '#f1833b' : '#667acd'}
+                                                    />
                                                 </th>
                                             </Row>
                                         )) }
@@ -67,7 +76,6 @@ const Subject: React.FC<Props> = ({ subject, parent }) => {
                                 </Table>
                             ) }
                         </GradeContainer>
-                        <InfoContainer></InfoContainer>
                     </Info>
                 </>
             ) }

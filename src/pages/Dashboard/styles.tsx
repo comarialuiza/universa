@@ -2,18 +2,23 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
 	grid-template-rows: 2fr 1fr;
 	grid-template-areas:
-		"generalInfo progress ira"
-		"generalInfo vacation ira"
-        "overview overview overview"
+		"generalInfo progress progress ira"
+		"generalInfo holiday vacation ira"
+        "overview overview overview overview"
 	;
     grid-gap: 30px;
 
     p {
         font-size: 15px;
         color: var(--color-text-complement);
+
+        span {
+            color: var(--color-primary);
+            font-weight: 500;
+        }
     }
 `;
 
@@ -42,6 +47,10 @@ export const SubContainer = styled.div`
 
     &&.overview {
         grid-area: overview;
+    }
+
+    &&.holiday {
+        grid-area: holiday;
     }
 
     &&.ira {

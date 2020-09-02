@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, SubjectsContainer } from './styles';
+import { Container, SubjectsContainer, Title } from './styles';
 
 import Subject from '../Subject';
 
@@ -27,7 +27,7 @@ interface Props {
 const Semester: React.FC<Props> = ({ semester, parent }) => {
     return (
         <Container>
-            <p>Semestre: { semester.semesterNumber }</p>
+            <Title>Semestre: { semester.semesterNumber }</Title>
 
             <SubjectsContainer type={ parent }>
                 { semester.subjects.map((subject: SubjectData) => (

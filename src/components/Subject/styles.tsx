@@ -42,15 +42,29 @@ export const StatisticContainer = styled.div`
 `;
 
 export const GradeContainer = styled.div`
-    width: 50%;
+    width: 48%;
 `;
 
 export const InfoContainer = styled.div`
-    width: 50%;
+    width: 48%;
 `;
 
 export const Info = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+`;
+
+export const Button = styled.button`
+    border: 0;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    background: var(--color-white);
+
+    &&:not(:last-of-type) {
+        margin-bottom: 15px;
+    }
 `;

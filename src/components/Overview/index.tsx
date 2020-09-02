@@ -41,9 +41,9 @@ const Overview: React.FC = () => {
                                 <Row>
                                     <th>{ subject.title }</th>
                                     <th>{ subject.teacher }</th>
-                                    <th>{ subject.grade } / 100</th>
-                                    <th>{ subject.frequency } %</th>
-                                    <th>{ subject.status === 'approved' ? 'Aprovado' : 'Em exame' } </th>
+                                    <th style={{ color: subject.grade < 70 ? '#f1833b' : '#667acd' }}>{ subject.grade } / 100</th>
+                                    <th style={{ color: subject.frequency < 75 ? '#f1833b' : '#667acd' }}>{ subject.frequency }%</th>
+                                    <th>{ subject.grade > 70 ? 'Aprovado' : 'Em exame' } </th>
                                 </Row>
                             )) }
                         </>
