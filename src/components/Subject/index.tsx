@@ -1,7 +1,8 @@
 import React from 'react';
-import { Statistic, Row, Col } from 'antd';
+import { Statistic, Progress } from 'antd';
 
-import { Container, Title, CodeFlag, Teacher, Grade, GradeContainer } from './styles';
+import { Container, Title, CodeFlag, Teacher, StatisticContainer, GradeContainer, InfoContainer, Info } from './styles';
+import { Table, TableHeader, TableBody, Row } from '../../styles/global';
 
 interface GradeProvider {
     id: number;
@@ -35,32 +36,41 @@ const Subject: React.FC<Props> = ({ subject, parent }) => {
             <CodeFlag>{ subject.code }</CodeFlag>
 
             { parent === 'subjects' ? (
-                <Row gutter={16}>
-                    <Col span={12}>
-                        <Statistic title="Nota" value={ subject.grade } suffix="/ 100" />
-                    </Col>
-                    <Col span={12}>
-                        <Statistic title="Frequência" value={ subject.frequency } suffix="/ 100" />
-                    </Col>
-                </Row>
+                <StatisticContainer>
+                    <Statistic title="Nota" value={ subject.grade } suffix="/ 100" />
+                    <Statistic title="Frequência" value={ subject.frequency } suffix="/ 100" />
+                </StatisticContainer>
             ) : (
-                <div>
-                    <Grade>
-                        <span>Trabalho/prova</span>
-                        <span>Nota</span>
-                    </Grade>
-                    <GradeContainer>
-                        { subject.gradeProvider && subject.gradeProvider.map((gradeData: GradeProvider) => (
-                            <Grade key={ gradeData.id }>
-                                <span>{ gradeData.title }</span>
-                                <span>{ gradeData.grade }</span>
-                            </Grade>
-                        )) }
-                    </GradeContainer>
-                </div>
+                <>
+                    <Info>
+                        <GradeContainer>
+                            { subject.gradeProvider && (
+                                <Table>
+                                    <TableHeader>
+                                        <tr>
+                                            <th>Trabalho/prova</th>
+                                            <th>Nota</th>
+                                        </tr>
+                                    </TableHeader>
+                                    <TableBody>
+                                        { subject.gradeProvider && subject.gradeProvider.map((gradeData: GradeProvider) => (
+                                            <Row key={ gradeData.id }>
+                                                <th style={{ width: '230px' }}>
+                                                    { gradeData.title }
+                                                </th>
+                                                <th>
+                                                    <Progress percent={gradeData.grade} size="small" />
+                                                </th>
+                                            </Row>
+                                        )) }
+                                    </TableBody>
+                                </Table>
+                            ) }
+                        </GradeContainer>
+                        <InfoContainer></InfoContainer>
+                    </Info>
+                </>
             ) }
-
-            
         </Container>
     );
 }

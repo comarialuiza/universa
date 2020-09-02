@@ -12,8 +12,8 @@ const subjectsMock = [
                 code: 'CEG301',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 70,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -63,8 +63,8 @@ const subjectsMock = [
                 code: 'CEG304',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -72,8 +72,8 @@ const subjectsMock = [
                 code: 'CEG306',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -81,8 +81,8 @@ const subjectsMock = [
                 code: 'CEG308',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -90,8 +90,8 @@ const subjectsMock = [
                 code: 'CEG310',
                 teacher: chance.name(),
                 hours: 45,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -99,8 +99,8 @@ const subjectsMock = [
                 code: 'CEG316',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -108,8 +108,8 @@ const subjectsMock = [
                 code: 'CEG317',
                 teacher: chance.name(),
                 hours: 45,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
         ]
@@ -132,8 +132,8 @@ const subjectsMock = [
                 code: 'CEG311',
                 teacher: chance.name(),
                 hours: 45,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -141,8 +141,8 @@ const subjectsMock = [
                 code: 'CEG313',
                 teacher: chance.name(),
                 hours: 45,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -150,8 +150,8 @@ const subjectsMock = [
                 code: 'CEG320',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -159,8 +159,8 @@ const subjectsMock = [
                 code: 'CEG318',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -168,8 +168,8 @@ const subjectsMock = [
                 code: 'CEG322',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
         ]
@@ -183,8 +183,8 @@ const subjectsMock = [
                 code: 'CEG314',
                 teacher: chance.name(),
                 hours: 45,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -192,8 +192,8 @@ const subjectsMock = [
                 code: 'CEG319',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -201,8 +201,8 @@ const subjectsMock = [
                 code: 'CEG321',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -210,8 +210,8 @@ const subjectsMock = [
                 code: 'CEG325',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -219,8 +219,8 @@ const subjectsMock = [
                 code: 'CEG328',
                 teacher: chance.name(),
                 hours: 45,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -228,8 +228,8 @@ const subjectsMock = [
                 code: 'CEG332',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
         ]
@@ -243,8 +243,8 @@ const subjectsMock = [
                 code: 'CEG315',
                 teacher: chance.name(),
                 hours: 45,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -252,8 +252,8 @@ const subjectsMock = [
                 code: 'CEG324',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -261,8 +261,8 @@ const subjectsMock = [
                 code: 'CEG326',
                 teacher: chance.name(),
                 hours: 45,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -270,8 +270,8 @@ const subjectsMock = [
                 code: 'CEG330',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -279,8 +279,8 @@ const subjectsMock = [
                 code: 'CEG333',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
         ]
@@ -301,27 +301,27 @@ const subjectsMock = [
                     {
                         id: 1,
                         title: 'Prova 1',
-                        grade: 95
+                        grade: chance.natural({min: 50, max: 100}),
                     },
                     { 
                         id: 2,
                         title: 'Prova 2',
-                        grade: 90
+                        grade: chance.natural({min: 50, max: 100}),
                     },
                     {
                         id: 3,
                         title: 'Trabalho sobre Semiótica',
-                        grade: 98
+                        grade: chance.natural({min: 50, max: 100}),
                     },
                     { 
                         id: 4,
                         title: 'Relatório sobre Photoshop',
-                        grade: 92,
+                        grade: chance.natural({min: 50, max: 100}),
                     },
                     {
                         id: 5,
                         title: 'Trabalho final da disciplina',
-                        grade: 78
+                        grade: chance.natural({min: 50, max: 100}),
                     }
                 ]
             },
@@ -330,8 +330,8 @@ const subjectsMock = [
                 code: 'CEG327',
                 teacher: chance.name(),
                 hours: 45,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -339,8 +339,8 @@ const subjectsMock = [
                 code: 'CEG323',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -348,8 +348,8 @@ const subjectsMock = [
                 code: 'CEG331',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -357,8 +357,8 @@ const subjectsMock = [
                 code: 'CEG334',
                 teacher: chance.name(),
                 hours: 45,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -366,8 +366,8 @@ const subjectsMock = [
                 code: 'CEG335',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
         ]
@@ -381,8 +381,8 @@ const subjectsMock = [
                 code: 'CEG336',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -390,8 +390,8 @@ const subjectsMock = [
                 code: 'CEG264',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
             {
@@ -399,8 +399,8 @@ const subjectsMock = [
                 code: 'CEG256',
                 teacher: chance.name(),
                 hours: 60,
-                grade: 80,
-                frequency: 60,
+                grade: chance.natural({min: 50, max: 100}),
+                frequency: chance.natural({min: 70, max: 100}),
                 status: 'approved'
             },
         ]

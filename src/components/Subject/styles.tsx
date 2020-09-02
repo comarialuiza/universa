@@ -6,6 +6,7 @@ export const Container = styled.div<{ type: string }>`
     padding: 30px 20px 20px;
     background-color: var(--color-white);
     position: relative;
+    margin-bottom: ${props => props.type === 'performance' ? '30px' : '0'};
 `;
 
 export const Title = styled.h3`
@@ -34,12 +35,22 @@ export const CodeFlag = styled.span`
     border-radius: 4px;
 `;
 
-export const Grade = styled.p`
+export const StatisticContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
 `;
 
 export const GradeContainer = styled.div`
+    width: 50%;
+`;
 
+export const InfoContainer = styled.div`
+    width: 50%;
+`;
+
+export const Info = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 `;

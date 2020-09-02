@@ -119,4 +119,28 @@ export const PageTitle = styled.h2`
     color: var(--color-primary);
 `;
 
+export const Table = styled.table`
+    width: 100%;
+    font-size: 16px;
+`;
+
+export const TableHeader = styled.thead`
+    th {
+        font-weight: 400;
+        color: var(--color-text-title);
+        padding-bottom: 10px;
+    }
+`;
+
+export const TableBody = styled.tbody`  
+`;
+
+export const Row = styled.tr`
+    th {
+        font-weight: 300;
+        padding: 8px 0;
+        color: var(--color-text-complement);
+    }
+`;
+
 export default GlobalStyle;

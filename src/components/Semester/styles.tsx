@@ -5,7 +5,8 @@ export const Container = styled.div`
 `;
 
 export const SubjectsContainer = styled.div<{ type: string }>`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    display: ${props => props.type === 'performance' ? 'block' : 'grid'};
+    grid-template-columns: ${props => props.type === 'performance' ? '' : 'repeat(3, 1fr)'};
+    grid-gap: ${props => props.type === 'performance' ? '' : '30px'};
+    margin-bottom: ${props => props.type === 'performance' ? '' : '30px'};
 `;

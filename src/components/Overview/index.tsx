@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Container, Table, TableHeader, TableBody, Row } from './styles';
+import { Container } from './styles';
+import { Table, TableHeader, TableBody, Row } from '../../styles/global';
 
 import subjectsMock from '../../utils/subjectsMockData';
 
