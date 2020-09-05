@@ -2,16 +2,23 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Container = styled.header`
-    padding: 40px;
     background-color: var(--color-white);
-    width: 300px;
-    height: calc(100vh - 80px);
-    border-radius: 20px 0 0 20px;
     
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+
+    @media (min-width: 1141px) {
+        width: 300px;
+        height: calc(100vh - 80px);
+        border-radius: 20px 0 0 20px;
+        padding: 40px;
+    }
+
+    @media (max-width: 1140px) {
+        display: none;
+    }
 `;
 
 export const HeaderContainer = styled.div``;

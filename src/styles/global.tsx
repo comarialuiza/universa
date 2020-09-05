@@ -49,11 +49,20 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: var(--color-primary);
 
         @media (min-width: 991px) {
-            background-color: var(--color-primary);
             padding: 40px;
         }
+
+        @media (min-width: 481px) and (max-width: 990px) {
+            padding: 30px;
+        }
+
+        @media (max-width: 480px) {
+            padding: 20px;
+        }
+
     }
 
     img {
@@ -65,12 +74,21 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .container {
-        width: calc(100% - 300px);
-        height: calc(100vh - 80px);
         background: var(--color-background);
-        border-radius: 0 20px 20px 0;
-        overflow: scroll;
-        padding: 40px;
+
+        @media (min-width: 1141px) {
+            width: calc(100% - 300px);
+            height: calc(100vh - 80px);
+            border-radius: 0 20px 20px 0;
+            overflow: scroll;
+            padding: 40px;
+        }
+
+        @media (max-width: 1140px) {
+            width: 100%;
+            padding: 20px;
+            border-radius: 20px;
+        }
     }
 
     @media (min-width: 700px) {

@@ -2,14 +2,30 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 2fr;
-	grid-template-rows: 2fr 1fr;
-	grid-template-areas:
-		"generalInfo progress progress ira"
-		"generalInfo holiday vacation ira"
-        "overview overview overview overview"
-	;
-    grid-gap: 30px;
+
+    @media (min-width: 991px) {
+        grid-template-columns: 2fr 1fr 1fr 2fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas:
+            "generalInfo progress progress ira"
+            "generalInfo holiday vacation ira"
+            "overview overview overview overview"
+        ;
+        grid-gap: 30px;
+    }
+
+    @media (max-width: 990px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 200px 380px 150px 500px;
+        grid-template-areas:
+            "generalInfo generalInfo"
+            "progress progress"
+            "ira ira"
+            "holiday vacation"
+            "overview overview"
+        ;
+        grid-gap: 30px;
+    }
 `;
 
 export const Title = styled.h3`
