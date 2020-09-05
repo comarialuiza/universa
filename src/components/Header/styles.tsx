@@ -76,3 +76,20 @@ export const User = styled.div<{ image: string }>`
     border-radius: 50%;
     border: 5px solid var(--color-primary);
 `;
+
+export const ButtonMobile = styled.div`
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        color: var(--color-button-text);
+    }
+`;

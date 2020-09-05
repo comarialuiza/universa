@@ -50,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
         align-items: center;
         justify-content: center;
         background-color: var(--color-primary);
+        position: relative;
 
         @media (min-width: 991px) {
             padding: 40px;
