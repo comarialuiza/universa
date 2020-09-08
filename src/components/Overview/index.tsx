@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { Container } from './styles';
 import { Table, TableHeader, TableBody, Row } from '../../styles/global';
@@ -36,9 +36,9 @@ const Overview: React.FC = () => {
                 </TableHeader>
                 <TableBody>
                     { subjectsMock.filter(status => status.active === true).map((semester: SemesterData) => (
-                        <>
+                        <Fragment key={ semester.semesterNumber }>
                             { semester.subjects.map((subject: Subject) => (
-                                <Row>
+                                <Row key={ subject.code }>
                                     <th>{ subject.title }</th>
                                     <th>{ subject.teacher }</th>
                                     <th style={{ color: subject.grade < 70 ? '#f1833b' : '#667acd' }}>{ subject.grade } / 100</th>
@@ -46,7 +46,7 @@ const Overview: React.FC = () => {
                                     <th>{ subject.grade > 70 ? 'Aprovado' : 'Em exame' } </th>
                                 </Row>
                             )) }
-                        </>
+                        </Fragment>
                     )) }
                 </TableBody>
             </Table>

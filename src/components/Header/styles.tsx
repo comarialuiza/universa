@@ -10,14 +10,26 @@ export const Container = styled.header`
     align-items: flex-start;
 
     @media (min-width: 1141px) {
-        width: 300px;
         height: calc(100vh - 80px);
         border-radius: 20px 0 0 20px;
         padding: 40px;
+        width: 300px;
     }
 
     @media (max-width: 1140px) {
-        display: none;
+        width: 250px;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        bottom: 0;
+        transition: all .2s;
+        padding: 20px;
+
+        &&.active {
+            left: 0;
+            z-index: 2;
+        }
     }
 `;
 
@@ -91,5 +103,9 @@ export const ButtonMobile = styled.div`
 
     svg {
         color: var(--color-button-text);
+    }
+
+    @media (min-width: 1141px) {
+        display: none;
     }
 `;

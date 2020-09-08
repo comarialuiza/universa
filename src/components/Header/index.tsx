@@ -5,11 +5,17 @@ import { Container, Title, Welcome, Navigation, NavigationLink, HeaderContainer,
 
 const Header: React.FC = () => {
     const [ user ] = useState('Maria Luiza');
+    const [ menu, setMenu ] = useState(false);
+
+    const handleOpenMenu = () => {
+        console.log('open menu!');
+        setMenu(true);
+    }
 
     return (
         <>
-            <ButtonMobile><MenuOutlined /></ButtonMobile>
-            <Container>
+            <ButtonMobile onClick={ handleOpenMenu }><MenuOutlined /></ButtonMobile>
+            <Container className={ menu ? 'active' : '' }>
                 <HeaderContainer>
                     <Welcome>Olá { user }, bem vindo/a ao</Welcome>
                     <Title>Universa</Title>
