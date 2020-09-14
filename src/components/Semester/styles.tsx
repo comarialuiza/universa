@@ -15,4 +15,6 @@ export const Title = styled.h4`
     color: var(--color-text-title);
     font-size: 22px;
     margin-bottom: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
 `;

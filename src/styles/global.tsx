@@ -45,6 +45,10 @@ const GlobalStyle = createGlobalStyle`
         color: var(--color-text-base);
     }
 
+    .dark-theme {
+        filter: hue-rotate(180deg) invert(100%);
+    }
+
     #root {
         display: flex;
         align-items: center;

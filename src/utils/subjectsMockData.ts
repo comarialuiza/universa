@@ -332,7 +332,29 @@ const subjectsMock = [
                 hours: 45,
                 grade: chance.natural({min: 50, max: 100}),
                 frequency: chance.natural({min: 70, max: 100}),
-                status: 'approved'
+                status: 'approved',
+                gradeProvider: [
+                    {
+                        id: 1,
+                        title: 'Projeto móveis sala',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                    { 
+                        id: 2,
+                        title: 'Projeto móveis banheiro',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                    {
+                        id: 3,
+                        title: 'Projeto móveis quarto',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                    { 
+                        id: 4,
+                        title: 'Projeto móveis cozinha',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                ]
             },
             {
                 title: 'Ambiente Construído',
@@ -341,7 +363,19 @@ const subjectsMock = [
                 hours: 60,
                 grade: chance.natural({min: 50, max: 100}),
                 frequency: chance.natural({min: 70, max: 100}),
-                status: 'approved'
+                status: 'approved',
+                gradeProvider: [
+                    {
+                        id: 1,
+                        title: 'Projeto móvel',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                    { 
+                        id: 2,
+                        title: 'Projeto iluminação',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                ]
             },
             {
                 title: 'Projeto de Produto II',
@@ -350,7 +384,24 @@ const subjectsMock = [
                 hours: 60,
                 grade: chance.natural({min: 50, max: 100}),
                 frequency: chance.natural({min: 70, max: 100}),
-                status: 'approved'
+                status: 'approved',
+                gradeProvider: [
+                    {
+                        id: 1,
+                        title: 'Projeto 1',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                    { 
+                        id: 2,
+                        title: 'Projeto 2',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                    {
+                        id: 3,
+                        title: 'Prova final',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                ]
             },
             {
                 title: 'Fabricação Digital',
@@ -359,7 +410,19 @@ const subjectsMock = [
                 hours: 45,
                 grade: chance.natural({min: 50, max: 100}),
                 frequency: chance.natural({min: 70, max: 100}),
-                status: 'approved'
+                status: 'approved',
+                gradeProvider: [
+                    {
+                        id: 1,
+                        title: 'Trabalho sobre Materiais',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                    { 
+                        id: 2,
+                        title: 'Trabalho Final',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                ]
             },
             {
                 title: 'Seminário de Expressão Gráfica',
@@ -368,7 +431,24 @@ const subjectsMock = [
                 hours: 60,
                 grade: chance.natural({min: 50, max: 100}),
                 frequency: chance.natural({min: 70, max: 100}),
-                status: 'approved'
+                status: 'approved',
+                gradeProvider: [
+                    {
+                        id: 1,
+                        title: 'Prova 1',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                    { 
+                        id: 2,
+                        title: 'Prova 2',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                    { 
+                        id: 3,
+                        title: 'Prova 3',
+                        grade: chance.natural({min: 50, max: 100}),
+                    },
+                ]
             },
         ]
     },

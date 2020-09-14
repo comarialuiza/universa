@@ -28,22 +28,27 @@ interface Props {
 const Subject: React.FC<Props> = ({ subject, parent }) => {
     return (
         <Container type={ parent }>
-            <Title>
-                { subject.title }
-            </Title>
-            <Teacher>Professor(a): { subject.teacher }</Teacher>
-
             <CodeFlag>{ subject.code }</CodeFlag>
 
             { parent === 'subjects' ? (
-                <StatisticContainer>
-                    <Statistic title="Nota" value={ subject.grade } suffix="/ 100" />
-                    <Statistic title="Frequência" value={ subject.frequency } suffix="/ 100" />
-                </StatisticContainer>
+                <>
+                    <Title>
+                        { subject.title }
+                    </Title>
+                    <Teacher>Professor(a): { subject.teacher }</Teacher>
+                    <StatisticContainer>
+                        <Statistic title="Nota" value={ subject.grade } suffix="/ 100" />
+                        <Statistic title="Frequência" value={ subject.frequency } suffix="/ 100" />
+                    </StatisticContainer>
+                </>
             ) : (
                 <>
                     <Info>
                         <InfoContainer>
+                            <Title>
+                                { subject.title }
+                            </Title>
+                            <Teacher>Professor(a): { subject.teacher }</Teacher>
                             <Button>Entrar em contato com o/a professor(a)</Button>
                             <Button>Acessar grade currícular</Button>
                             <Button>Acessar lista de livros e materiais recomendados</Button>
