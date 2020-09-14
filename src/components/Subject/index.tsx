@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Statistic, Progress } from 'antd';
 
 import { Container, Title, CodeFlag, Teacher, StatisticContainer, GradeContainer, InfoContainer, Info, Button } from './styles';
 import { Table, TableHeader, TableBody, Row } from '../../styles/global';
+
+import PopUp from '../../components/PopUp';
 
 interface GradeProvider {
     id: number;
@@ -26,6 +28,8 @@ interface Props {
 }
 
 const Subject: React.FC<Props> = ({ subject, parent }) => {
+    const [ talkToTeacher, setTalkToTeacher ] = useState(false);
+
     return (
         <Container type={ parent }>
             <CodeFlag>{ subject.code }</CodeFlag>
@@ -49,7 +53,7 @@ const Subject: React.FC<Props> = ({ subject, parent }) => {
                                 { subject.title }
                             </Title>
                             <Teacher>Professor(a): { subject.teacher }</Teacher>
-                            <Button>Entrar em contato com o/a professor(a)</Button>
+                            <Button onClick={ () => setTalkToTeacher(true) }>Entrar em contato com o/a professor(a)</Button>
                             <Button>Acessar grade currícular</Button>
                             <Button>Acessar lista de livros e materiais recomendados</Button>
                         </InfoContainer>
@@ -84,6 +88,10 @@ const Subject: React.FC<Props> = ({ subject, parent }) => {
                     </Info>
                 </>
             ) }
+
+            {
+                talkToTeacher && <PopUp />
+            }
         </Container>
     );
 }

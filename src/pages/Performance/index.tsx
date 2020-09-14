@@ -5,7 +5,6 @@ import { Container, PerformanceContainer } from './styles';
 import Header from '../../components/Header';
 
 import subjectsMock from '../../utils/subjectsMockData';
-
 interface Subject {
   title: string;
   code: string;
