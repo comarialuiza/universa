@@ -9,6 +9,16 @@ import { fifteenWeekSemester, eighteenWeekSemester } from '../../utils/calendarM
 
 import { Container } from './styles';
 
+Calendar.locales['pt'] = {
+	days: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
+	daysShort: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"],
+	daysMin: ["Do", "Se", "Te", "Qu", "Qu", "Se", "Sa"],
+	months: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+	monthsShort: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+	weekShort: 'S',
+	weekStart:0
+};
+
 interface Event {
   name: string;
   startDate: Date;
@@ -18,6 +28,7 @@ interface Event {
 const CalendarContainer: React.FC = () => {
   const [ weeks, setWeeks ] = useState(15);
   const [ language ] = useState('pt');
+  const [ message, setMessage ] = useState('');
 
   return (
     <>
@@ -28,8 +39,14 @@ const CalendarContainer: React.FC = () => {
 
         <Calendar 
           dataSource={ weeks === 15 ? fifteenWeekSemester : eighteenWeekSemester }
-          language="fr"
+          language={ language }
+          onDayEnter={ () => {
+            console.log('hello!')
+          }}
+          onDayClick={(e: MouseEvent) => setMessage('Clicked!')}
         />
+
+        { message && <p> {message}</p>}
 
         { /* dataSource.map((event: Event) => (
           <div>
