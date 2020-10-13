@@ -14,7 +14,7 @@ const Schedule: React.FC = () => {
             <Container className="container">
                 { semesterActive ? (
                     <AvailableContainer>
-                        
+                            
                     </AvailableContainer>
                 ) : (
                     <UnavailableContainer>

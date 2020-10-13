@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import Calendar from 'rc-year-calendar';
 import moment from 'moment';
-import { Button } from 'antd';
 
 import Header from '../../components/Header';
 
 import { fifteenWeekSemester, eighteenWeekSemester } from '../../utils/calendarMockData';
 
-import { Container } from './styles';
+import { Container, Button, ButtonContainer } from './styles';
 
 Calendar.locales['pt'] = {
 	days: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
@@ -34,8 +33,10 @@ const CalendarContainer: React.FC = () => {
     <>
       <Header />
       <Container className="container">
-        <Button onClick={ () => setWeeks(15) }>Para cursos de 15 semanas</Button>
-        <Button onClick={ () => setWeeks(18) }>Para cursos de 18 semanas</Button>
+        <ButtonContainer>
+          <Button onClick={ () => setWeeks(15) }>Para cursos de 15 semanas</Button>
+          <Button onClick={ () => setWeeks(18) }>Para cursos de 18 semanas</Button>
+        </ButtonContainer>
 
         <Calendar 
           dataSource={ weeks === 15 ? fifteenWeekSemester : eighteenWeekSemester }
@@ -44,6 +45,9 @@ const CalendarContainer: React.FC = () => {
             console.log('hello!')
           }}
           onDayClick={(e: MouseEvent) => setMessage('Clicked!')}
+          style={{
+            boxShadow: '#667acd 0px -4px 0px 0px inset'
+          }}
         />
 
         { message && <p> {message}</p>}
