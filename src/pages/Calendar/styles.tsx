@@ -33,3 +33,37 @@ export const ButtonContainer = styled.div`
         margin-right: 20px;
     }
 `;
+
+export const EventList = styled.ul`
+    max-width: 250px;
+    margin-left: 20px;
+    list-style: none;
+
+    max-height: 100%;
+    overflow: scroll;
+`;
+
+export const Event = styled.li<{ active: boolean }>`
+    padding-left: 20px;
+    border-left: ${({ active }) => active ? '5px solid var(--color-secondary)' : '5px solid transparent'};
+    margin-bottom: 20px;
+`;
+
+export const EventName = styled.p`
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-tertiary);
+    text-align: justify;
+`;
+
+export const EventDate = styled.p`
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: var(--color-primary);
+`;
+
+export const CalendarContent = styled.div`
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+`;

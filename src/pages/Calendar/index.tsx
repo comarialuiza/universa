@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Calendar from 'rc-year-calendar';
 import moment from 'moment';
 
@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 
 import { fifteenWeekSemester, eighteenWeekSemester } from '../../utils/calendarMockData';
 
-import { Container, Button, ButtonContainer } from './styles';
+import { Container, Button, ButtonContainer, EventList, Event, EventName, EventDate, CalendarContent } from './styles';
 
 Calendar.locales['pt'] = {
 	days: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
@@ -27,37 +27,53 @@ interface Event {
 const CalendarContainer: React.FC = () => {
   const [ weeks, setWeeks ] = useState(15);
   const [ language ] = useState('pt');
-  const [ message, setMessage ] = useState('');
+  const [ eventName, setEventName ] = useState('');
+  const [ dataSource, setDataSource ] = useState(fifteenWeekSemester);
+
+  useEffect(() => {
+    console.log(eventName);
+  }, [ eventName ]);
 
   return (
     <>
       <Header />
       <Container className="container">
         <ButtonContainer>
-          <Button onClick={ () => setWeeks(15) }>Para cursos de 15 semanas</Button>
-          <Button onClick={ () => setWeeks(18) }>Para cursos de 18 semanas</Button>
+          <Button onClick={ () => { 
+              setWeeks(15);
+              setDataSource(fifteenWeekSemester);
+            }
+          }>
+            Para cursos de 15 semanas
+          </Button>
+          <Button onClick={ () => { 
+              setWeeks(18);
+              setDataSource(eighteenWeekSemester);
+            }
+          }>
+            Para cursos de 18 semanas
+          </Button>
         </ButtonContainer>
 
-        <Calendar 
-          dataSource={ weeks === 15 ? fifteenWeekSemester : eighteenWeekSemester }
-          language={ language }
-          onDayEnter={ () => {
-            console.log('hello!')
-          }}
-          onDayClick={(e: MouseEvent) => setMessage('Clicked!')}
-          style={{
-            boxShadow: '#667acd 0px -4px 0px 0px inset'
-          }}
-        />
+        <CalendarContent>
+          <Calendar 
+            dataSource={ weeks === 15 ? fifteenWeekSemester : eighteenWeekSemester }
+            language={ language }
+            onDayClick={(date: any, e: MouseEvent) => date.events.length > 0 && setEventName(date.events[0].name)}
+            style={{
+              boxShadow: '#667acd 0px -4px 0px 0px inset'
+            }}
+          />
 
-        { message && <p> {message}</p>}
-
-        { /* dataSource.map((event: Event) => (
-          <div>
-            <span>{ moment(event.startDate).format('L') } - { moment(event.endDate).format('L') }</span>
-            <p>{ event.name }</p>
-          </div>
-        )) */ }
+          <EventList>
+            { dataSource.map((event: Event) => (
+              <Event active={ eventName === event.name ? true : false }>
+                <EventDate>{ moment(event.startDate).format('DD/MM/YYYY') } - { moment(event.endDate).format('DD/MM/YYYY') }</EventDate>
+                <EventName>{ event.name }</EventName>
+              </Event>
+            )) }
+          </EventList>
+        </CalendarContent>
       </Container>
     </>
   );
