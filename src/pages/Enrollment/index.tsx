@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import Header from '../../components/Header';
 import { DownloadOutlined } from '@ant-design/icons';
 
-import { Container, AvailableContainer, SubjectsAvailable } from './styles';
+import { Container, AvailableContainer, SubjectsAvailable, AvailableTitle, SubjectAvailable, SubjectTitle, SubjectTeacher, SubjectHours, SubjectCode } from './styles';
 import { UnavailableContainer } from '../../styles/global';
 
-import subjectsMock from './../../utils/subjectsMockData';
-
-import { SemesterData, Subject } from './../../components/Overview';
+import enrollmentMock from './../../utils/enrollmentMockData';
+interface EnrollmentData {
+    title: string;
+    code: string;
+    teacher: string;
+    hours: number;
+}
 
 const Enrollment: React.FC = () => {
     const [ enrollmentAvailable ] = useState(true);
@@ -18,13 +22,15 @@ const Enrollment: React.FC = () => {
             <Container className="container">
                 { enrollmentAvailable ? (
                     <AvailableContainer>
+                        <AvailableTitle>Disciplinas disponíveis no semestre 2020.2</AvailableTitle>
                         <SubjectsAvailable>
-                            { subjectsMock.filter(status => status.active === true).map((semester: SemesterData) => (
-                                <>
-                                    { semester.subjects.map((subject: Subject) => (
-                                        <li>{ subject.title }</li>
-                                    )) }
-                                </>
+                            { enrollmentMock.map((subject: EnrollmentData) => (
+                                <SubjectAvailable>
+                                    <SubjectTitle>{ subject.title }</SubjectTitle>
+                                    <SubjectCode>{ subject.code }</SubjectCode>
+                                    <SubjectTeacher>{ subject.teacher }</SubjectTeacher>
+                                    <SubjectHours>{ subject.hours } horas</SubjectHours>
+                                </SubjectAvailable>
                             )) }
                         </SubjectsAvailable>    
                     </AvailableContainer>
