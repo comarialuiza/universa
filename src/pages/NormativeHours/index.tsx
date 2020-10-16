@@ -1,31 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Modal, Form, Input } from 'antd';
+import { Form } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 
 import { Container, NormativeHoursContainer, HoursSum, SubmitButton, NormativeHeader } from './styles';
 import Normative from '../../components/Normative';
 import Header from '../../components/Header';
+import PopUp from '../../components/PopUp';
 
 import normativeHoursMock from '../../utils/normativeHoursMockData';
+import { NormativeHour } from './../../components/Normative';
 
 const NormativeHours: React.FC = () => {
   const [ form ] = Form.useForm();
   const [ normativeSum, setNormativeSum ] = useState(0);
   const [ modalVisibility, setModalVisibility ] = useState(false);
-
-  function showModal() {
-    setModalVisibility(true);
-  }
-
-  function handleOk() {
-    setModalVisibility(false);
-    console.log('Handle ok!');
-  }
-
-  function handleCancel() {
-    setModalVisibility(false);
-    console.log('Handle cancel!');
-  }
 
   const normativeTotal = normativeHoursMock.reduce(
     (acc, cur) => {
@@ -45,40 +33,20 @@ const NormativeHours: React.FC = () => {
           <HoursSum>
             Somatório das horas normativas: <span>{ normativeSum }</span>
           </HoursSum>
-          <SubmitButton onClick={ showModal }>
+          <SubmitButton onClick={ () => setModalVisibility(true) }>
             Adicionar Hora Normativa
           </SubmitButton>
         </NormativeHeader>
 
-        <Modal
-          title="Adicionar hora normativa"
-          visible={ modalVisibility }
-          onOk={ handleOk } 
-          onCancel={ handleCancel }
-          okText='Adicionar'
-          cancelText='Cancelar'
-        >
-          <Form
-            layout="vertical"
-            form={form}
-          >
-            <Form.Item label="Nome">
-              <Input placeholder="Ex: Curso de Inglês" />
-            </Form.Item>
-            <Form.Item label="Horas">
-              <Input placeholder="Ex: 60" />
-            </Form.Item>
-            <Form.Item label="Arquivo">
-              <Button>
-                <UploadOutlined /> Selecionar arquivo
-              </Button>
-            </Form.Item>
-          </Form>
-        </Modal>
+        { modalVisibility && (
+          <PopUp setModalVisibility={ setModalVisibility }>
+            <h1>This is a popup</h1>
+          </PopUp>
+        ) }
 
         <NormativeHoursContainer>
-          { normativeHoursMock.map(normativeHour => (
-            <Normative normative={ normativeHour }/>
+          { normativeHoursMock.map((normativeHour: NormativeHour) => (
+            <Normative normative={ normativeHour } key={ normativeHour.id }/>
           )) }
         </NormativeHoursContainer>
       </Container>

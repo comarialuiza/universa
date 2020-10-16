@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Container, Title, Hours, Button } from './styles';
 
-interface NormativeHour {
-    id: number;
+export interface NormativeHour {
+    id: string;
     title: string;
     hours: number;
     certificate: string;

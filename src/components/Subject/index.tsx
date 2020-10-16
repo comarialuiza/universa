@@ -7,7 +7,7 @@ import { Table, TableHeader, TableBody, Row } from '../../styles/global';
 import PopUp from '../../components/PopUp';
 
 interface GradeProvider {
-    id: number;
+    id: string;
     title: string;
     grade: number;
 }  
@@ -28,6 +28,7 @@ interface Props {
 }
 
 const Subject: React.FC<Props> = ({ subject, parent }) => {
+    const [ modalVisibility, setModalVisibility ] = useState(false);
     const [ talkToTeacher, setTalkToTeacher ] = useState(false);
 
     return (
@@ -90,7 +91,11 @@ const Subject: React.FC<Props> = ({ subject, parent }) => {
             ) }
 
             {
-                talkToTeacher && <PopUp />
+                talkToTeacher && (
+                    <PopUp setModalVisibility={ setModalVisibility }>
+                        <h1>Hello</h1>
+                    </PopUp>
+                )
             }
         </Container>
     );

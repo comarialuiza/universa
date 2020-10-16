@@ -31,7 +31,7 @@ const Semester: React.FC<Props> = ({ semester, parent }) => {
 
             <SubjectsContainer type={ parent }>
                 { semester.subjects.map((subject: SubjectData) => (
-                    <Subject subject={ subject } parent={ parent }/>
+                    <Subject subject={ subject } parent={ parent } key={ subject.code }/>
                 )) }
             </SubjectsContainer>
         </Container>

@@ -1,4 +1,5 @@
 import Chance from 'chance';
+import { v4 as uuid } from 'uuid';
 
 const chance = new Chance();
 
@@ -299,27 +300,27 @@ const subjectsMock = [
                 status: 'approved',
                 gradeProvider: [
                     {
-                        id: 1,
+                        id: uuid(),
                         title: 'Prova 1',
                         grade: chance.natural({min: 50, max: 100}),
                     },
                     { 
-                        id: 2,
+                        id: uuid(),
                         title: 'Prova 2',
                         grade: chance.natural({min: 50, max: 100}),
                     },
                     {
-                        id: 3,
+                        id: uuid(),
                         title: 'Trabalho sobre Semiótica',
                         grade: chance.natural({min: 50, max: 100}),
                     },
                     { 
-                        id: 4,
+                        id: uuid(),
                         title: 'Relatório sobre Photoshop',
                         grade: chance.natural({min: 50, max: 100}),
                     },
                     {
-                        id: 5,
+                        id: uuid(),
                         title: 'Trabalho final da disciplina',
                         grade: chance.natural({min: 50, max: 100}),
                     }
@@ -335,22 +336,22 @@ const subjectsMock = [
                 status: 'approved',
                 gradeProvider: [
                     {
-                        id: 1,
+                        id: uuid(),
                         title: 'Projeto móveis sala',
                         grade: chance.natural({min: 50, max: 100}),
                     },
                     { 
-                        id: 2,
+                        id: uuid(),
                         title: 'Projeto móveis banheiro',
                         grade: chance.natural({min: 50, max: 100}),
                     },
                     {
-                        id: 3,
+                        id: uuid(),
                         title: 'Projeto móveis quarto',
                         grade: chance.natural({min: 50, max: 100}),
                     },
                     { 
-                        id: 4,
+                        id: uuid(),
                         title: 'Projeto móveis cozinha',
                         grade: chance.natural({min: 50, max: 100}),
                     },
@@ -366,12 +367,12 @@ const subjectsMock = [
                 status: 'approved',
                 gradeProvider: [
                     {
-                        id: 1,
+                        id: uuid(),
                         title: 'Projeto móvel',
                         grade: chance.natural({min: 50, max: 100}),
                     },
                     { 
-                        id: 2,
+                        id: uuid(),
                         title: 'Projeto iluminação',
                         grade: chance.natural({min: 50, max: 100}),
                     },
@@ -387,17 +388,17 @@ const subjectsMock = [
                 status: 'approved',
                 gradeProvider: [
                     {
-                        id: 1,
+                        id: uuid(),
                         title: 'Projeto 1',
                         grade: chance.natural({min: 50, max: 100}),
                     },
                     { 
-                        id: 2,
+                        id: uuid(),
                         title: 'Projeto 2',
                         grade: chance.natural({min: 50, max: 100}),
                     },
                     {
-                        id: 3,
+                        id: uuid(),
                         title: 'Prova final',
                         grade: chance.natural({min: 50, max: 100}),
                     },
@@ -413,12 +414,12 @@ const subjectsMock = [
                 status: 'approved',
                 gradeProvider: [
                     {
-                        id: 1,
+                        id: uuid(),
                         title: 'Trabalho sobre Materiais',
                         grade: chance.natural({min: 50, max: 100}),
                     },
                     { 
-                        id: 2,
+                        id: uuid(),
                         title: 'Trabalho Final',
                         grade: chance.natural({min: 50, max: 100}),
                     },
@@ -434,17 +435,17 @@ const subjectsMock = [
                 status: 'approved',
                 gradeProvider: [
                     {
-                        id: 1,
+                        id: uuid(),
                         title: 'Prova 1',
                         grade: chance.natural({min: 50, max: 100}),
                     },
                     { 
-                        id: 2,
+                        id: uuid(),
                         title: 'Prova 2',
                         grade: chance.natural({min: 50, max: 100}),
                     },
                     { 
-                        id: 3,
+                        id: uuid(),
                         title: 'Prova 3',
                         grade: chance.natural({min: 50, max: 100}),
                     },
