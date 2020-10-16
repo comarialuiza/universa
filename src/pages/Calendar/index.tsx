@@ -61,6 +61,7 @@ const CalendarContainer: React.FC = () => {
             dataSource={ weeks === 15 ? fifteenWeekSemester : eighteenWeekSemester }
             language={ language }
             onDayClick={(date: any, e: MouseEvent) => date.events.length > 0 && setEventName(date.events[0].name)}
+            style="background"
           />
 
           <EventList>

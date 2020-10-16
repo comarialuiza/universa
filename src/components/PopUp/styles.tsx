@@ -12,6 +12,21 @@ export const Overlay = styled.div`
     background: rgba(0, 0, 0, 0.5);
 
     cursor: pointer;
+
+    &&:after {
+        content: 'X';
+        height: 30px;
+        width: 30px;
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 24px;
+        color: var(--color-secondary);
+        font-weight: bold;
+    }
 `;
 
 export const Container = styled.div`
@@ -41,4 +56,5 @@ export const Title = styled.h3`
     font-size: 24px;
     color: var(--color-primary);
     font-weight: normal;
+    text-align: center;
 `;

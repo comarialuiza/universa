@@ -172,7 +172,7 @@ export const FormContainer = styled.form`
     border-radius: 8px;
 
     @media (min-width: 481px) {
-        width: 440px;
+        max-width: 440px;
     }
 
     @media (max-width: 480px) {

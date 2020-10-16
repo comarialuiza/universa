@@ -5,7 +5,7 @@ import { Table, TableHeader, TableBody, Row } from '../../styles/global';
 
 import subjectsMock from '../../utils/subjectsMockData';
 
-interface Subject {
+export interface Subject {
     title: string;
     code: string;
     teacher: string;
@@ -15,7 +15,7 @@ interface Subject {
     status: string;
 }
 
-interface SemesterData {
+export interface SemesterData {
     semesterNumber: number;
     active: boolean;
     subjects: Array<Subject>;

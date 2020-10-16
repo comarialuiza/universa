@@ -91,7 +91,7 @@ const Subject: React.FC<Props> = ({ subject, parent }) => {
 
             {
                 modalVisibility && (
-                    <PopUp setModalVisibility={ setModalVisibility } title='Entrar em contato com o professor'>
+                    <PopUp setModalVisibility={ setModalVisibility } title={ `Entrar em contato com o/a professor(a) ${subject.teacher}` }>
                         <FormContainer>
                             <Label htmlFor="subject">
                                 Assunto

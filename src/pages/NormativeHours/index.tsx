@@ -48,7 +48,7 @@ const NormativeHours: React.FC = () => {
               <Label htmlFor="hours">
                 Horas
               </Label>
-              <Input id="hours"/>
+              <Input id="hours" type='number'/>
 
               <FakeLabel>
                 Anexar certificado
