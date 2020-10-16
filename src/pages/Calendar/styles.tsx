@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Container = styled.div`
     .day-header {
         color: var(--color-primary);
@@ -35,12 +34,14 @@ export const ButtonContainer = styled.div`
 `;
 
 export const EventList = styled.ul`
-    max-width: 250px;
-    margin-left: 20px;
     list-style: none;
 
-    max-height: 100%;
-    overflow: scroll;
+    @media (min-width: 991px) {
+        min-width: 350px;
+        margin-left: 20px;
+        max-height: 880px;
+        overflow: scroll;
+    }
 `;
 
 export const Event = styled.li<{ active: boolean }>`

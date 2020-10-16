@@ -19,6 +19,7 @@ Calendar.locales['pt'] = {
 };
 
 interface Event {
+  id: string;
   name: string;
   startDate: Date;
   endDate: Date;
@@ -60,15 +61,23 @@ const CalendarContainer: React.FC = () => {
             dataSource={ weeks === 15 ? fifteenWeekSemester : eighteenWeekSemester }
             language={ language }
             onDayClick={(date: any, e: MouseEvent) => date.events.length > 0 && setEventName(date.events[0].name)}
-            style={{
-              boxShadow: '#667acd 0px -4px 0px 0px inset'
-            }}
           />
 
           <EventList>
             { dataSource.map((event: Event) => (
-              <Event active={ eventName === event.name ? true : false }>
-                <EventDate>{ moment(event.startDate).format('DD/MM/YYYY') } - { moment(event.endDate).format('DD/MM/YYYY') }</EventDate>
+              <Event active={ eventName === event.name ? true : false } key={ event.id }>
+                { event.startDate === event.endDate 
+                  ? (
+                    <EventDate>
+                      { moment(event.startDate).format('DD/MM/YYYY') }
+                    </EventDate>
+                  )
+                  : (
+                    <EventDate>
+                      { moment(event.startDate).format('DD/MM/YYYY') } - { moment(event.endDate).format('DD/MM/YYYY') }
+                    </EventDate>
+                  )
+                }
                 <EventName>{ event.name }</EventName>
               </Event>
             )) }
