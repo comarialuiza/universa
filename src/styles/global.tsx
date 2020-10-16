@@ -168,7 +168,6 @@ export const Row = styled.tr`
 
 export const FormContainer = styled.form`
     width: 100%;
-    padding: 40px;
     background: var(--color-background);
     border-radius: 8px;
 
@@ -197,6 +196,35 @@ export const Input = styled.input`
     border-bottom: 2px solid var(--color-primary);
 `;
 
-export const FileInput = styled.input``;
+export const FileInput = styled.label`
+    padding: 8px 12px;
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    text-align: center;
+    cursor: pointer;
+
+    svg {
+        margin-right: 22px;
+    }
+`;
+
+export const FakeLabel = styled(Label)`
+`;
+
+export const Button = styled.button`
+    border: 0;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    background: var(--color-white);
+`;
 
 export default GlobalStyle;

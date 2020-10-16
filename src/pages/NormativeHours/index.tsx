@@ -8,7 +8,7 @@ import PopUp from '../../components/PopUp';
 
 import normativeHoursMock from '../../utils/normativeHoursMockData';
 import { NormativeHour } from './../../components/Normative';
-import { FormContainer, Label, Input, FileInput } from '../../styles/global';
+import { FormContainer, Label, Input, FileInput, FakeLabel, Button } from '../../styles/global';
 
 const NormativeHours: React.FC = () => {
   const [ normativeSum, setNormativeSum ] = useState(0);
@@ -41,21 +41,25 @@ const NormativeHours: React.FC = () => {
           <PopUp setModalVisibility={ setModalVisibility } title='Adicionar hora normativa'>
             <FormContainer>
               <Label htmlFor="name">
-                  Nome
+                Nome
               </Label>
               <Input id="name"/>
 
               <Label htmlFor="hours">
-                  Horas
+                Horas
               </Label>
               <Input id="hours"/>
 
-              <Label htmlFor="certificate">
-                  Certificado
-              </Label>
-              <FileInput id="certificate" type='file' />
+              <FakeLabel>
+                Anexar certificado
+              </FakeLabel>
+              <FileInput htmlFor="certificate">
+                <UploadOutlined/>
+                Certificado
+              </FileInput>
+              <Input id="certificate" type='file' style={{ display: 'none' }} />
 
-              <SubmitButton>Enviar</SubmitButton>
+              <Button>Enviar</Button>
             </FormContainer>
           </PopUp>
         ) }

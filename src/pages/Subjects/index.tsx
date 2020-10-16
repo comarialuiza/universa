@@ -32,7 +32,7 @@ const Subjects: React.FC = () => {
             <Container className="container">
                 <SemesterContainer>
                     { subjectsMock.map((semester: SemesterData) => (
-                        <Semester semester={ semester } parent="subjects" />
+                        <Semester semester={ semester } parent="subjects" key={ semester.semesterNumber }/>
                     )) }
                 </SemesterContainer>
             </Container>

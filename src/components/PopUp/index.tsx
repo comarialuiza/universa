@@ -10,12 +10,13 @@ interface Props {
 
 const PopUp: React.FC<Props> = ({ setModalVisibility, title, children }) => {
   return ReactDOM.createPortal(
-    <Overlay onClick={ () => { setModalVisibility(false) }}>
+    <>
+      <Overlay onClick={ () => { setModalVisibility(false) }} />
       <Container>
           <Title>{ title }</Title>
           { children }
       </Container>
-    </Overlay>,
+    </>,
     document.body
   )
 }

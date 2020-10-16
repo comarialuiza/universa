@@ -15,12 +15,19 @@ export const Overlay = styled.div`
 `;
 
 export const Container = styled.div`
-    padding: 20px;
+    padding: 40px;
     background-color: var(--color-background);
     position: relative;
     width: 100%;
     max-width: 500px;
     border-radius: 20px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    z-index: 2;
 
     display: flex;
     flex-direction: column;
