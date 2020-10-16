@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Statistic, Progress } from 'antd';
 
 import { Container, Title, CodeFlag, Teacher, StatisticContainer, GradeContainer, InfoContainer, Info, Button } from './styles';
-import { Table, TableHeader, TableBody, Row } from '../../styles/global';
+import { Table, TableHeader, TableBody, Row, FormContainer, Label, Input } from '../../styles/global';
 
 import PopUp from '../../components/PopUp';
 
@@ -29,7 +29,6 @@ interface Props {
 
 const Subject: React.FC<Props> = ({ subject, parent }) => {
     const [ modalVisibility, setModalVisibility ] = useState(false);
-    const [ talkToTeacher, setTalkToTeacher ] = useState(false);
 
     return (
         <Container type={ parent }>
@@ -54,7 +53,7 @@ const Subject: React.FC<Props> = ({ subject, parent }) => {
                                 { subject.title }
                             </Title>
                             <Teacher>Professor(a): { subject.teacher }</Teacher>
-                            <Button onClick={ () => setTalkToTeacher(true) }>Entrar em contato com o/a professor(a)</Button>
+                            <Button onClick={ () => setModalVisibility(true) }>Entrar em contato com o/a professor(a)</Button>
                             <Button>Acessar grade currícular</Button>
                             <Button>Acessar lista de livros e materiais recomendados</Button>
                         </InfoContainer>
@@ -91,9 +90,21 @@ const Subject: React.FC<Props> = ({ subject, parent }) => {
             ) }
 
             {
-                talkToTeacher && (
-                    <PopUp setModalVisibility={ setModalVisibility }>
-                        <h1>Hello</h1>
+                modalVisibility && (
+                    <PopUp setModalVisibility={ setModalVisibility } title='Entrar em contato com o professor'>
+                        <FormContainer>
+                            <Label htmlFor="subject">
+                                Assunto
+                            </Label>
+                            <Input id="subject"/>
+
+                            <Label htmlFor="message">
+                                Mensagem
+                            </Label>
+                            <Input id="message"/>
+
+                            <Button>Enviar</Button>
+                        </FormContainer>
                     </PopUp>
                 )
             }

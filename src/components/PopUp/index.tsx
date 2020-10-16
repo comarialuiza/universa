@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Overlay, Container } from './styles';
+import { Overlay, Container, Title } from './styles';
 
 interface Props {
+  title: string,
   setModalVisibility: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const PopUp: React.FC<Props> = ({ setModalVisibility, children }) => {
+const PopUp: React.FC<Props> = ({ setModalVisibility, title, children }) => {
   return ReactDOM.createPortal(
     <Overlay onClick={ () => { setModalVisibility(false) }}>
       <Container>
+          <Title>{ title }</Title>
           { children }
       </Container>
     </Overlay>,

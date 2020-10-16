@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Form } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 
 import { Container, NormativeHoursContainer, HoursSum, SubmitButton, NormativeHeader } from './styles';
@@ -9,9 +8,9 @@ import PopUp from '../../components/PopUp';
 
 import normativeHoursMock from '../../utils/normativeHoursMockData';
 import { NormativeHour } from './../../components/Normative';
+import { FormContainer, Label, Input, FileInput } from '../../styles/global';
 
 const NormativeHours: React.FC = () => {
-  const [ form ] = Form.useForm();
   const [ normativeSum, setNormativeSum ] = useState(0);
   const [ modalVisibility, setModalVisibility ] = useState(false);
 
@@ -39,8 +38,25 @@ const NormativeHours: React.FC = () => {
         </NormativeHeader>
 
         { modalVisibility && (
-          <PopUp setModalVisibility={ setModalVisibility }>
-            <h1>This is a popup</h1>
+          <PopUp setModalVisibility={ setModalVisibility } title='Adicionar hora normativa'>
+            <FormContainer>
+              <Label htmlFor="name">
+                  Nome
+              </Label>
+              <Input id="name"/>
+
+              <Label htmlFor="hours">
+                  Horas
+              </Label>
+              <Input id="hours"/>
+
+              <Label htmlFor="certificate">
+                  Certificado
+              </Label>
+              <FileInput id="certificate" type='file' />
+
+              <SubmitButton>Enviar</SubmitButton>
+            </FormContainer>
           </PopUp>
         ) }
 

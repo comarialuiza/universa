@@ -166,4 +166,37 @@ export const Row = styled.tr`
     }
 `;
 
+export const FormContainer = styled.form`
+    width: 100%;
+    padding: 40px;
+    background: var(--color-background);
+    border-radius: 8px;
+
+    @media (min-width: 481px) {
+        width: 440px;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+`;
+
+export const Label = styled.label`
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+`;
+
+export const Input = styled.input`
+    border: 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    width: 100%;
+    border-bottom: 2px solid var(--color-primary);
+`;
+
+export const FileInput = styled.input``;
+
 export default GlobalStyle;

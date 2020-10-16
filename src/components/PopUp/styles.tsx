@@ -19,6 +19,19 @@ export const Container = styled.div`
     background-color: var(--color-background);
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: auto;
+`;
+
+export const Title = styled.h3`
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--color-primary);
+    font-weight: normal;
 `;

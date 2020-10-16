@@ -22,7 +22,6 @@ export const Title = styled.h1`
 
 export const FormContainer = styled.form`
     width: 100%;
-    max-width: 300px;
     padding: 40px;
     background: var(--color-background);
     border-radius: 8px;
