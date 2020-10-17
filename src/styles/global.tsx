@@ -227,4 +227,35 @@ export const Button = styled.button`
     background: var(--color-white);
 `;
 
+export const Overlay = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    z-index: 5;
+
+    cursor: pointer;
+
+    &&:after {
+        content: 'X';
+        height: 30px;
+        width: 30px;
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 24px;
+        color: var(--color-secondary);
+        font-weight: bold;
+    }
+`;
+
 export default GlobalStyle;

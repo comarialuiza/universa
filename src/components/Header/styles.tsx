@@ -28,7 +28,7 @@ export const Container = styled.header`
 
         &&.active {
             left: 0;
-            z-index: 2;
+            z-index: 10;
         }
     }
 `;
@@ -100,6 +100,7 @@ export const ButtonMobile = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 9;
 
     svg {
         color: var(--color-button-text);

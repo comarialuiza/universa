@@ -7,6 +7,10 @@ export const Container = styled.div<{ type: string }>`
     background-color: var(--color-white);
     position: relative;
     margin-bottom: ${props => props.type === 'performance' ? '30px' : '0'};
+
+    @media (max-width: 480px) {
+        margin-bottom: 30px;
+    }
 `;
 
 export const Title = styled.h3`
@@ -42,17 +46,29 @@ export const StatisticContainer = styled.div`
 `;
 
 export const GradeContainer = styled.div`
-    width: 48%;
+    @media (min-width: 991px) {
+        width: 48%;
+    }
 `;
 
 export const InfoContainer = styled.div`
-    width: 48%;
+    @media (max-width: 990px) {
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: 991px) {
+        width: 48%;
+    }
 `;
 
 export const Info = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    
+
+    @media (min-width: 991px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 `;
 
 export const Button = styled.button`
@@ -63,6 +79,10 @@ export const Button = styled.button`
     color: var(--color-primary);
     border: 2px solid var(--color-primary);
     background: var(--color-white);
+
+    @media (max-width: 790px) {
+        width: 100%;
+    }
 
     &&:not(:last-of-type) {
         margin-bottom: 15px;

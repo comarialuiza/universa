@@ -2,19 +2,16 @@ import React, { useState } from 'react';
 import { PieChartOutlined, CalendarOutlined, ClockCircleOutlined, LineChartOutlined, BookOutlined, ProjectOutlined, FormOutlined, RiseOutlined, MenuOutlined } from '@ant-design/icons';
 
 import { Container, Title, Welcome, Navigation, NavigationLink, HeaderContainer, User, ButtonMobile } from './styles';
+import { Overlay } from './../../styles/global';
 
 const Header: React.FC = () => {
     const [ user ] = useState('Maria Luiza');
     const [ menu, setMenu ] = useState(false);
 
-    const handleOpenMenu = () => {
-        console.log('open menu!');
-        setMenu(true);
-    }
-
     return (
         <>
-            <ButtonMobile onClick={ handleOpenMenu }><MenuOutlined /></ButtonMobile>
+            <ButtonMobile onClick={ () => setMenu(true) }><MenuOutlined /></ButtonMobile>
+            { menu && <Overlay onClick={ () => setMenu(false) } /> }
             <Container className={ menu ? 'active' : '' }>
                 <HeaderContainer>
                     <Welcome>Olá { user }, bem vindo/a ao</Welcome>
