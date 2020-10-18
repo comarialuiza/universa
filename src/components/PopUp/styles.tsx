@@ -13,13 +13,20 @@ export const Container = styled.div`
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
 
-    z-index: 2;
+    z-index: 15;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
+
+    p {
+        color: var(--color-text-complement);
+        text-align: center;
+        font-size: 16px;
+        line-height: 22px;
+    }
 `;
 
 export const Title = styled.h3`

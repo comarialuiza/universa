@@ -255,6 +255,7 @@ export const Overlay = styled.div`
         font-size: 24px;
         color: var(--color-secondary);
         font-weight: bold;
+        background-color: var(--color-white);
     }
 `;
 

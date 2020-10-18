@@ -2,10 +2,18 @@ import styled from 'styled-components';
 
 export const Container = styled.div``;
 
-export const AvailableContainer = styled.div`
+export const FlexContainer = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+`;
+
+export const AvailableContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
 `;
 
 export const SubjectsContainer = styled.div`
@@ -14,7 +22,7 @@ export const SubjectsContainer = styled.div`
 
 export const SubjectsList = styled.ul`
     list-style: none;
-    max-height: 400px;
+    max-height: 450px;
     
     overflow: scroll;
 `;
@@ -73,4 +81,67 @@ export const SubjectCode = styled.span`
     font-size: 13px;
     color: var(--color-title-in-primary);
     border-radius: 4px;
+`;
+
+export const SubjectStatus = styled.p`
+    margin: 12px 0 0;
+    color: var(--color-secondary);
+    font-size: 14px;
+`;
+
+export const NoSubjects = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    
+    svg {
+        font-size: 60px;
+        margin-bottom: 20px;
+        color: var(--color-primary);
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+        color: var(--color-tertiary);
+    }
+
+    p {
+        color: var(--color-text-complement);
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+
+        @media (min-width: 481px) {
+            width: 280px;
+        }
+    }
+`;
+
+export const ButtonsContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+`;
+
+export const Button = styled.button<{ bg: string }>`
+    border: 0;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 2px solid var(--color-primary);
+    color: ${({ bg }) => bg === 'cancel' ? 'var(--color-primary)' : 'var(--color-white)'};
+    background: ${({ bg }) => bg === 'cancel' ? 'var(--color-white)' : 'var(--color-primary)'};
+
+    &:first-of-type {
+        margin-right: 20px;
+    }
+
+    &:disabled {
+        opacity: .6;
+        cursor: not-allowed;
+    }
 `;
