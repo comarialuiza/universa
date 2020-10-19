@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const Container = styled.div<{ type: string }>`
     border-left: 5px solid var(--color-primary);

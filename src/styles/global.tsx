@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components/macro';
 
 const GlobalStyle = createGlobalStyle`
     :root {
@@ -107,7 +107,7 @@ export const UnavailableContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    min-height: 100%;
     flex-direction: column;
 
     svg {
@@ -252,10 +252,12 @@ export const Overlay = styled.div`
         right: 50px;
         line-height: 30px;
         text-align: center;
-        font-size: 24px;
+        font-size: 20px;
         color: var(--color-secondary);
         font-weight: bold;
         background-color: var(--color-white);
+        border-radius: 50%;
+        cursor: pointer;
     }
 `;
 

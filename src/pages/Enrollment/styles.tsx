@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+`;
 
 export const FlexContainer = styled.div`
     display: flex;
@@ -17,7 +18,17 @@ export const AvailableContainer = styled.div`
 `;
 
 export const SubjectsContainer = styled.div`
-    width: 48%;
+    @media (max-width: 790px) {
+        width: 100%;
+        
+        &:first-of-type {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (min-width: 791px) {
+        width: 48%;
+    }
 `;
 
 export const SubjectsList = styled.ul`
