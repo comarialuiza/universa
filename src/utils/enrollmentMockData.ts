@@ -67,7 +67,7 @@ const enrollmentMock = [
                 hour: '9:30 - 11:30'
             }
         ],
-        status: 'Matrícula em andamento'
+        status: 'Matrícula em Andamento'
     },
     {
         title: 'Composição I',
@@ -84,7 +84,7 @@ const enrollmentMock = [
                 hour: '9:30 - 11:30'
             }
         ],
-        status: 'Em Andamento'
+        status: 'Matrícula em Andamento'
     },
     {
         title: 'Modelagem da Informação e da Construção',
@@ -101,7 +101,7 @@ const enrollmentMock = [
                 hour: '9:30 - 11:30'
             }
         ],
-        status: 'Em Andamento'
+        status: 'Matrícula em Andamento'
     },
     {
         title: 'Modelagem Mecânica I',
@@ -118,7 +118,7 @@ const enrollmentMock = [
                 hour: '9:30 - 11:30'
             }
         ],
-        status: 'Em Andamento'
+        status: 'Matrícula em Andamento'
     },
     {
         title: 'Prototipagem I',
@@ -135,7 +135,7 @@ const enrollmentMock = [
                 hour: '9:30 - 11:30'
             }
         ],
-        status: 'Em Andamento'
+        status: 'Matrícula em Andamento'
     },
     {
         title: 'Projeto de Móveis II',
@@ -152,7 +152,7 @@ const enrollmentMock = [
                 hour: '9:30 - 11:30'
             }
         ],
-        status: 'Em Andamento'
+        status: 'Matrícula em Andamento'
     },
     {
         title: 'Projeto de Produto II',
@@ -169,7 +169,7 @@ const enrollmentMock = [
                 hour: '9:30 - 11:30'
             }
         ],
-        status: 'Em Andamento'
+        status: 'Matrícula em Andamento'
     },
     {
         title: 'Seminário de Expressão Gráfica',
@@ -186,7 +186,7 @@ const enrollmentMock = [
                 hour: '9:30 - 11:30'
             }
         ],
-        status: 'Em Andamento'
+        status: 'Matrícula em Andamento'
     },
     {
         title: 'Trabalho de Conclusão de Curso I',
@@ -203,7 +203,7 @@ const enrollmentMock = [
                 hour: '9:30 - 11:30'
             }
         ],
-        status: 'Em Andamento'
+        status: 'Matrícula em Andamento'
     },
     {
         title: 'História do Desenho',
@@ -220,7 +220,7 @@ const enrollmentMock = [
                 hour: '13:30 - 15:30'
             }
         ],
-        status: 'Em Andamento'
+        status: 'Matrícula em Andamento'
     },
     {
         title: 'Fundamentos do Web Design I',
@@ -237,7 +237,7 @@ const enrollmentMock = [
                 hour: '7:30 - 9:30'
             }
         ],
-        status: 'Em Andamento'
+        status: 'Matrícula em Andamento'
     },
 ];
 
