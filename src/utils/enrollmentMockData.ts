@@ -67,7 +67,7 @@ const enrollmentMock = [
                 hour: '9:30 - 11:30'
             }
         ],
-        status: 'Em Andamento'
+        status: 'Matrícula em andamento'
     },
     {
         title: 'Composição I',

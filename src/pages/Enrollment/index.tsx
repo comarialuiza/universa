@@ -3,8 +3,8 @@ import Header from '../../components/Header';
 import { DownloadOutlined, WarningOutlined } from '@ant-design/icons';
 
 import PopUp from './../../components/PopUp';
-import { Container, AvailableContainer, SubjectsContainer, Title, Description, SubjectAvailable, SubjectTitle, SubjectTeacher, SubjectHours, SubjectCode, SubjectsList, SubjectStatus, NoSubjects, ButtonsContainer, Button, FlexContainer } from './styles';
-import { UnavailableContainer } from '../../styles/global';
+import { Container, AvailableContainer, SubjectsContainer, Title, Description, SubjectAvailable, SubjectTitle, SubjectTeacher, SubjectHours, SubjectCode, SubjectsList, SubjectStatus, NoSubjects, ButtonsContainer, Button, FlexContainer, SubjectData, TableContainer, TableHeader } from './styles';
+import { UnavailableContainer, TableBody, Row } from '../../styles/global';
 
 import enrollmentMock from './../../utils/enrollmentMockData';
 
@@ -56,10 +56,28 @@ const Enrollment: React.FC = () => {
                                             } }
                                             key={ subject.code }
                                         >
-                                            <SubjectTitle>{ subject.title }</SubjectTitle>
-                                            <SubjectCode>{ subject.code }</SubjectCode>
-                                            <SubjectTeacher>{ subject.teacher }</SubjectTeacher>
-                                            <SubjectHours>{ subject.hours } horas</SubjectHours>
+                                            <SubjectData>
+                                                <SubjectTitle>{ subject.title }</SubjectTitle>
+                                                <SubjectCode>{ subject.code }</SubjectCode>
+                                                <SubjectTeacher>{ subject.teacher }</SubjectTeacher>
+                                                <SubjectHours>{ subject.hours } horas</SubjectHours>
+                                            </SubjectData>
+                                            <TableContainer>
+                                                <TableHeader>
+                                                    <tr>
+                                                        <th>Dia da semana</th>
+                                                        <th>Horário</th>
+                                                    </tr>
+                                                </TableHeader>
+                                                <TableBody>
+                                                    { subject.schedule.map(schedule => (
+                                                        <Row>
+                                                            <th>{ schedule.dayOfTheWeek }</th>
+                                                            <th>{ schedule.hour }</th>
+                                                        </Row>
+                                                    )) }
+                                                </TableBody>
+                                            </TableContainer>
                                         </SubjectAvailable>
                                     )) }
                                 </SubjectsList>
@@ -86,11 +104,29 @@ const Enrollment: React.FC = () => {
                                             } }
                                             key={ subject.code }
                                         >
-                                            <SubjectTitle>{ subject.title }</SubjectTitle>
-                                            <SubjectCode>{ subject.code }</SubjectCode>
-                                            <SubjectTeacher>{ subject.teacher }</SubjectTeacher>
-                                            <SubjectHours>{ subject.hours } horas</SubjectHours>
-                                            { subject.status && <SubjectStatus>{ subject.status }</SubjectStatus> }
+                                            <SubjectData>
+                                                <SubjectTitle>{ subject.title }</SubjectTitle>
+                                                <SubjectCode>{ subject.code }</SubjectCode>
+                                                <SubjectTeacher>{ subject.teacher }</SubjectTeacher>
+                                                <SubjectHours>{ subject.hours } horas</SubjectHours>
+                                                { subject.status && <SubjectStatus>{ subject.status }</SubjectStatus> }
+                                            </SubjectData>
+                                            <TableContainer>
+                                                <TableHeader>
+                                                    <tr>
+                                                        <th>Dia da semana</th>
+                                                        <th>Horário</th>
+                                                    </tr>
+                                                </TableHeader>
+                                                <TableBody>
+                                                    { subject.schedule.map(schedule => (
+                                                        <Row>
+                                                            <th>{ schedule.dayOfTheWeek }</th>
+                                                            <th>{ schedule.hour }</th>
+                                                        </Row>
+                                                    )) }
+                                                </TableBody>
+                                            </TableContainer>
                                         </SubjectAvailable>
                                     )) }
                                 </SubjectsList>

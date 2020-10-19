@@ -1,12 +1,34 @@
 import styled from 'styled-components/macro';
+import { Table, TableHeader as TableHead } from '../../styles/global';
+
+export const TableContainer = styled(Table)`
+    @media (min-width: 481px) {
+        width: 48%;
+    }
+
+
+    @media (max-width: 480px) {
+        width: 100%;
+        margin-top: 18px;
+    }
+`;
+
+export const TableHeader = styled(TableHead)`
+    th {
+        font-weight: 300;
+        color: var(--color-tertiary);
+    }
+`;
 
 export const Container = styled.div`
 `;
 
 export const FlexContainer = styled.div`
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    @media (min-width: 1141px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
 `;
 
 export const AvailableContainer = styled.div`
@@ -18,16 +40,16 @@ export const AvailableContainer = styled.div`
 `;
 
 export const SubjectsContainer = styled.div`
-    @media (max-width: 790px) {
+    @media (min-width: 1141px) {
+        width: 48%;
+    }
+
+    @media (max-width: 1140px) {
         width: 100%;
         
         &:first-of-type {
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
-    }
-
-    @media (min-width: 791px) {
-        width: 48%;
     }
 `;
 
@@ -59,6 +81,12 @@ export const SubjectAvailable = styled.li`
     width: calc(100% - 18px);
     position: relative;
     cursor: pointer;
+
+    @media (min-width: 481px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
 
     &:not(:last-of-type) {
         margin-bottom: 20px;
@@ -98,6 +126,17 @@ export const SubjectStatus = styled.p`
     margin: 12px 0 0;
     color: var(--color-secondary);
     font-size: 14px;
+`;
+
+export const SubjectData = styled.div`
+    @media (min-width: 481px) {
+        width: 48%;
+    }
+
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
 `;
 
 export const NoSubjects = styled.div`
