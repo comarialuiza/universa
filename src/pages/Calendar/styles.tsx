@@ -13,6 +13,10 @@ export const Container = styled.div`
     .year-title {
         color: var(--color-primary);
     }
+
+    .calendar .calendar-header {
+        display: none;
+    }
 `;
 
 export const Button = styled.button`
@@ -28,8 +32,21 @@ export const Button = styled.button`
 export const ButtonContainer = styled.div`
     margin-bottom: 20px;
 
-    > ${ Button }:first-of-type {
-        margin-right: 20px;
+    @media (min-width: 481px) {
+        > ${ Button }:first-of-type {
+            margin-right: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        >${ Button } {
+            width: 100%;
+            text-align: center;
+
+            &:first-of-type {
+                margin-bottom: 10px;
+            }
+        }
     }
 `;
 
@@ -42,11 +59,15 @@ export const EventList = styled.ul`
         max-height: 880px;
         overflow: scroll;
     }
+
+    @media (max-width: 990px) {
+        margin-top: 20px;
+    }
 `;
 
-export const Event = styled.li<{ active: boolean }>`
+export const Event = styled.li<{ eventColor: string }>`
     padding-left: 20px;
-    border-left: ${({ active }) => active ? '5px solid var(--color-secondary)' : '5px solid transparent'};
+    border-left: ${({ eventColor }) => eventColor ? `5px solid ${eventColor}` : '5px solid transparent'};
     margin-bottom: 20px;
 `;
 
@@ -64,7 +85,9 @@ export const EventDate = styled.p`
 `;
 
 export const CalendarContent = styled.div`
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    @media (min-width: 991px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
 `;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Calendar from 'rc-year-calendar';
 import moment from 'moment';
 
@@ -18,6 +18,11 @@ Calendar.locales['pt'] = {
 	weekStart:0
 };
 
+interface SelectedEvent {
+  color: string;
+  name: string;
+}
+
 interface Event {
   id: string;
   name: string;
@@ -28,12 +33,8 @@ interface Event {
 const CalendarContainer: React.FC = () => {
   const [ weeks, setWeeks ] = useState(15);
   const [ language ] = useState('pt');
-  const [ eventName, setEventName ] = useState('');
+  const [ selectedEvent, setSelectedEvent ] = useState<SelectedEvent>();
   const [ dataSource, setDataSource ] = useState(fifteenWeekSemester);
-
-  useEffect(() => {
-    console.log(eventName);
-  }, [ eventName ]);
 
   return (
     <>
@@ -60,13 +61,13 @@ const CalendarContainer: React.FC = () => {
           <Calendar 
             dataSource={ weeks === 15 ? fifteenWeekSemester : eighteenWeekSemester }
             language={ language }
-            onDayClick={(date: any, e: MouseEvent) => date.events.length > 0 && setEventName(date.events[0].name)}
+            onDayClick={(date: any, e: MouseEvent) => date.events.length > 0 && setSelectedEvent(date.events[0])}
             style="background"
           />
 
           <EventList>
             { dataSource.map((event: Event) => (
-              <Event active={ eventName === event.name ? true : false } key={ event.id }>
+              <Event eventColor={ selectedEvent?.name === event.name ? selectedEvent.color : 'transparent' } key={ event.id }>
                 { event.startDate === event.endDate 
                   ? (
                     <EventDate>
