@@ -3,8 +3,9 @@ import { WarningOutlined } from '@ant-design/icons';
 
 import Header from '../../components/Header';
 import { UnavailableContainer } from '../../styles/global';
-import { Container, AvailableContainer, Calendar } from './styles';
+import { Container, AvailableContainer } from './styles';
 
+import FullCalendar from '@fullcalendar/react';
 import timeGridPlugin from '@fullcalendar/timegrid';
 
 import scheduleMock from './../../utils/scheduleMockData';
@@ -19,7 +20,7 @@ const Schedule: React.FC = () => {
             <Container className="container">
                 { semesterActive ? (
                     <AvailableContainer>
-                        <Calendar
+                        <FullCalendar
                             plugins={[ timeGridPlugin ]}
                             initialView="timeGridWeek"
                             weekends={ false }
