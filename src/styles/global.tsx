@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components/macro';
+import PDF from "react-pdf-js";
 
 const GlobalStyle = createGlobalStyle`
     :root {
@@ -259,6 +260,11 @@ export const Overlay = styled.div`
         border-radius: 50%;
         cursor: pointer;
     }
+`;
+
+export const PDFViewer = styled(PDF)`
+    width: 100%;
+    max-width: 100%;
 `;
 
 export default GlobalStyle;

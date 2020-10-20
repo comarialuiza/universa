@@ -1,11 +1,13 @@
 import styled from 'styled-components/macro';
 
-export const Container = styled.div`
+export const Container = styled.div<{large: boolean}>`
     padding: 40px;
     background-color: var(--color-background);
     position: relative;
     width: 100%;
-    max-width: 500px;
+    max-width: ${({ large }) => large ? '900px' : '500px'};
+    max-height: 700px;
+    overflow: scroll;
     border-radius: 20px;
 
     position: absolute;
@@ -26,6 +28,11 @@ export const Container = styled.div`
         text-align: center;
         font-size: 16px;
         line-height: 22px;
+    }
+
+    canvas {
+        width: 100%;
+        height: auto;
     }
 `;
 
