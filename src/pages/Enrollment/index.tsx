@@ -55,6 +55,7 @@ const Enrollment: React.FC = () => {
                                                 }
                                             } }
                                             key={ subject.code }
+                                            className='available'
                                         >
                                             <SubjectData>
                                                 <SubjectTitle>{ subject.title }</SubjectTitle>
@@ -103,6 +104,7 @@ const Enrollment: React.FC = () => {
                                                 setChosenSubjects(newChosenSubjects);
                                             } }
                                             key={ subject.code }
+                                            className='selected'
                                         >
                                             <SubjectData>
                                                 <SubjectTitle>{ subject.title }</SubjectTitle>

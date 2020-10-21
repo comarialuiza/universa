@@ -82,6 +82,18 @@ export const SubjectAvailable = styled.li`
     position: relative;
     cursor: pointer;
 
+    &::after {
+        content: '';
+        height: 30px;
+        width: 30px;
+        display: block;
+        background-color: var(--color-primary);
+        border-radius: 3px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
     @media (min-width: 481px) {
         display: flex;
         align-items: flex-start;
