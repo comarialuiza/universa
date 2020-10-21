@@ -9,20 +9,21 @@ export const Container = styled.div`
         grid-template-areas:
             "generalInfo progress progress ira"
             "generalInfo holiday vacation ira"
-            "overview overview overview overview"
+            "overview overview overview activities"
         ;
         grid-gap: 30px;
     }
 
     @media (max-width: 990px) {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 300px 200px 380px 150px 500px;
+        grid-template-rows: 300px 200px 380px 150px 500px 300px;
         grid-template-areas:
             "generalInfo generalInfo"
             "progress progress"
             "ira ira"
             "holiday vacation"
             "overview overview"
+            "activities activities"
         ;
         grid-gap: 30px;
     }
@@ -49,6 +50,10 @@ export const SubContainer = styled.div`
 
     &&.progress {
         grid-area: progress;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
 
         p {
             font-size: 15px;
@@ -73,8 +78,16 @@ export const SubContainer = styled.div`
         grid-area: holiday;
     }
 
+    &&.activities {
+        grid-area: activities;
+    }
+
     &&.ira {
         grid-area: ira;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
 
         .content {
             display: flex;

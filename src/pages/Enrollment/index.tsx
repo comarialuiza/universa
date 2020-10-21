@@ -71,7 +71,7 @@ const Enrollment: React.FC = () => {
                                                 </TableHeader>
                                                 <TableBody>
                                                     { subject.schedule.map(schedule => (
-                                                        <Row>
+                                                        <Row key={ schedule.dayOfTheWeek }>
                                                             <th>{ schedule.dayOfTheWeek }</th>
                                                             <th>{ schedule.hour }</th>
                                                         </Row>
@@ -120,7 +120,7 @@ const Enrollment: React.FC = () => {
                                                 </TableHeader>
                                                 <TableBody>
                                                     { subject.schedule.map(schedule => (
-                                                        <Row>
+                                                        <Row key={ schedule.dayOfTheWeek }>
                                                             <th>{ schedule.dayOfTheWeek }</th>
                                                             <th>{ schedule.hour }</th>
                                                         </Row>

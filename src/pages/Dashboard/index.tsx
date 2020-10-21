@@ -3,6 +3,7 @@ import { Progress, Statistic } from 'antd';
 
 import Overview from '../../components/Overview';
 import Header from '../../components/Header';
+import NextActivities from '../../components/NextActivities';
 
 import { Container, Title, SubContainer, Description, SubTitle } from './styles';
 
@@ -53,6 +54,11 @@ const Dashboard: React.FC = () => {
 
         <SubContainer className="overview">
           <Overview />
+        </SubContainer>
+
+        <SubContainer className="activities">
+          <Title>Próximas atividades</Title>
+          <NextActivities />
         </SubContainer>
 
         <SubContainer className="ira">
