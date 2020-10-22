@@ -18,6 +18,7 @@ const enrollmentMock = [
                 hour: '9:30 - 11:30'
             }
         ],
+        status: 'Matrícula confirmada'
     },
     {
         title: 'Geometria Descritiva I',
@@ -34,6 +35,7 @@ const enrollmentMock = [
                 hour: '9:30 - 11:30'
             }
         ],
+        status: 'Matrícula pendente'
     },
     {
         title: 'Desenho Geométrico I',

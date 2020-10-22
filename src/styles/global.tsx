@@ -239,6 +239,7 @@ export const Overlay = styled.div`
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
 
+    cursor: pointer;
     z-index: 5;
 
     cursor: pointer;
@@ -265,6 +266,23 @@ export const Overlay = styled.div`
 export const PDFViewer = styled(PDF)`
     width: 100%;
     max-width: 100%;
+    position: relative;
+`;
+
+export const PDFDownload = styled.a`
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 16px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 8px;
+
+    &:hover {
+        color: var(--color-white);
+    }
 `;
 
 export default GlobalStyle;

@@ -5,7 +5,6 @@ import { Container, Title, CodeFlag, Teacher, StatisticContainer, GradeContainer
 import { Table, TableHeader, TableBody, Row, FormContainer, Label, Input } from '../../styles/global';
 
 import PopUp from '../../components/PopUp';
-
 interface GradeProvider {
     id: string;
     title: string;

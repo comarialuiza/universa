@@ -55,7 +55,7 @@ export const SubjectsContainer = styled.div`
 
 export const SubjectsList = styled.ul`
     list-style: none;
-    max-height: 450px;
+    height: 450px;
     
     overflow: scroll;
 `;
@@ -80,19 +80,6 @@ export const SubjectAvailable = styled.li`
     padding: 12px;
     width: calc(100% - 18px);
     position: relative;
-    cursor: pointer;
-
-    &::after {
-        content: '';
-        height: 30px;
-        width: 30px;
-        display: block;
-        background-color: var(--color-primary);
-        border-radius: 3px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
 
     @media (min-width: 481px) {
         display: flex;
@@ -205,5 +192,26 @@ export const Button = styled.button<{ bg: string }>`
     &:disabled {
         opacity: .6;
         cursor: not-allowed;
+    }
+`;
+
+export const ActionButton = styled.button`
+    height: 25px;
+    width: 25px;
+    display: block;
+    background-color: var(--color-primary);
+    border-radius: 3px;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    border: 0;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    svg {
+        color: var(--color-white);
     }
 `;
