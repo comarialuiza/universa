@@ -11,6 +11,11 @@ export const SubmitButton = styled.button`
     border-radius: 8px;
     font-size: 15px;
     border: 0;
+
+    @media (max-width: 480px) {
+        width: 100%;
+        text-align;
+    }
 `;
 
 export const NormativeHoursContainer = styled.div`
@@ -38,8 +43,11 @@ export const HoursSum = styled.p`
 `;
 
 export const NormativeHeader = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-bottom: 25px;
+
+    @media (min-width: 791px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 `;

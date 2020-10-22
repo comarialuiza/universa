@@ -23,6 +23,11 @@ export const Container = styled.div<{large: boolean}>`
     justify-content: center;
     margin: auto;
 
+    @media (max-width: 990px) {
+        max-width: 90%;
+        max-height: auto;
+    }
+
     p {
         color: var(--color-text-complement);
         text-align: center;
@@ -31,8 +36,8 @@ export const Container = styled.div<{large: boolean}>`
     }
 
     canvas {
-        width: 100%;
-        height: auto;
+        width: 100%!important;
+        height: auto!important;
     }
 `;
 

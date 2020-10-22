@@ -39,6 +39,7 @@ export const Title = styled.h1`
     font-family: Megrim;
     font-size: 50px;
     color: var(--color-primary);
+    margin: 0;
 `;
 
 export const Welcome = styled.p`

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Statistic, Progress } from 'antd';
 
 import { Container, Title, CodeFlag, Teacher, StatisticContainer, GradeContainer, InfoContainer, Info, Button } from './styles';
-import { Table, TableHeader, TableBody, Row, FormContainer, Label, Input } from '../../styles/global';
+import { Table, TableHeader, TableBody, Row, FormContainer, Label, Input, TextArea } from '../../styles/global';
 
 import PopUp from '../../components/PopUp';
 interface GradeProvider {
@@ -100,7 +100,7 @@ const Subject: React.FC<Props> = ({ subject, parent }) => {
                             <Label htmlFor="message">
                                 Mensagem
                             </Label>
-                            <Input id="message"/>
+                            <TextArea id="message"/>
 
                             <Button>Enviar</Button>
                         </FormContainer>

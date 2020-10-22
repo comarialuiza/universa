@@ -196,6 +196,17 @@ export const Input = styled.input`
     border-bottom: 2px solid var(--color-primary);
 `;
 
+export const TextArea = styled.textarea`
+    height: 100px;
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 0;
+    border-bottom: 2px solid var(--color-primary);
+    resize: vertical;
+`;
+
 export const FileInput = styled.label`
     padding: 8px 12px;
     background-color: var(--color-white);

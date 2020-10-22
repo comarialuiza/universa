@@ -15,10 +15,13 @@ export const Report = styled.button`
     background-color: var(--color-white);
     color: var(--color-primary);
     font-size: 16px;
-    margin-bottom: 20px;
     width: 200px;
 
     @media (max-width: 480px) {
         width: 100%;
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: 20px;
     }
 `;
