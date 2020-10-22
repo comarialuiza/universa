@@ -110,3 +110,8 @@ export const ButtonMobile = styled.div`
         display: none;
     }
 `;
+
+export const UserName = styled.span`
+    font-weight: 500;
+    color: var(--color-primary);
+`;

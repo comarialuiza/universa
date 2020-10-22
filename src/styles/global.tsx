@@ -137,7 +137,6 @@ export const UnavailableContainer = styled.div`
 `;
 
 export const PageTitle = styled.h2`
-    font-family: Megrim;
     font-size: 34px;
     margin-bottom: 20px;
     color: var(--color-primary);

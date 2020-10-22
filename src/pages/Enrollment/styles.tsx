@@ -80,6 +80,7 @@ export const SubjectAvailable = styled.li`
     padding: 12px;
     width: calc(100% - 18px);
     position: relative;
+    border-left: 5px solid var(--color-primary);
 
     @media (min-width: 481px) {
         display: flex;

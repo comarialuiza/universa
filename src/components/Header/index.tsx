@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PieChartOutlined, CalendarOutlined, ClockCircleOutlined, LineChartOutlined, BookOutlined, ProjectOutlined, FormOutlined, RiseOutlined, MenuOutlined } from '@ant-design/icons';
 
-import { Container, Title, Welcome, Navigation, NavigationLink, HeaderContainer, User, ButtonMobile } from './styles';
+import { Container, Title, Welcome, Navigation, NavigationLink, HeaderContainer, User, ButtonMobile, UserName } from './styles';
 import { Overlay } from './../../styles/global';
 
 const Header: React.FC = () => {
@@ -14,7 +14,7 @@ const Header: React.FC = () => {
             { menu && <Overlay onClick={ () => setMenu(false) } /> }
             <Container className={ menu ? 'active' : '' }>
                 <HeaderContainer>
-                    <Welcome>Olá { user }, bem vindo/a ao</Welcome>
+                    <Welcome>Olá <UserName>{ user }</UserName>, bem vindo/a ao</Welcome>
                     <Title>Universa</Title>
                 </HeaderContainer>
 
