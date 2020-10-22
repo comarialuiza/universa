@@ -5,6 +5,7 @@ export const Container = styled.ul`
 
     overflow: scroll;
     max-height: 195px;
+    margin-bottom: 0;
 `;
 
 export const Activity = styled.li`

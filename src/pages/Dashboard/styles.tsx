@@ -16,7 +16,7 @@ export const Container = styled.div`
 
     @media (max-width: 990px) {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 300px 200px 380px 150px 500px 300px;
+        grid-template-rows: 300px 200px 380px 150px 500px 270px;
         grid-template-areas:
             "generalInfo generalInfo"
             "progress progress"
