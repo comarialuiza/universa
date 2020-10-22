@@ -24,6 +24,8 @@ export const Container = styled.div`
 `;
 
 export const FlexContainer = styled.div`
+    width: 100%;
+
     @media (min-width: 1141px) {
         display: flex;
         align-items: flex-start;

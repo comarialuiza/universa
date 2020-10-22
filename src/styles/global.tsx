@@ -75,6 +75,10 @@ const GlobalStyle = createGlobalStyle`
         max-width: 100%;
     }
 
+    p {
+        margin: 0;
+    }
+
     button {
         cursor: pointer;
     }

@@ -26,6 +26,7 @@ export const Title = styled.h3`
 export const Teacher = styled.p`
     color: var(--color-text-complement);
     font-size: 15px;
+    margin-bottom: 15px;
 `;
 
 export const CodeFlag = styled.span`

@@ -10,7 +10,7 @@ export const Container = styled.div<{large: boolean}>`
     overflow: scroll;
     border-radius: 20px;
 
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
