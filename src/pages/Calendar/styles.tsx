@@ -19,15 +19,16 @@ export const Container = styled.div`
     }
 `;
 
-export const Button = styled.button`
-    background-color: var(--color-secondary);
+export const Button = styled.button<{ active: boolean }>`
+    background-color: ${({ active }) => active ? 'var(--color-secondary)' : 'var(--color-white)'};
     border-radius: 8px;
-    color: var(--color-input-background);
+    color: ${({ active }) => active ? 'var(--color-white)' : 'var(--color-secondary)'};
     padding: 8px 12px;
     border-radius: 8px;
     font-size: 15px;
     border: 0;
-`;
+    border: 2px solid var(--color-secondary);
+`; 
 
 export const ButtonContainer = styled.div`
     margin-bottom: 20px;

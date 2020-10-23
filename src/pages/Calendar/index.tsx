@@ -41,18 +41,22 @@ const CalendarContainer: React.FC = () => {
       <Header />
       <Container className="container">
         <ButtonContainer>
-          <Button onClick={ () => { 
+          <Button 
+            active={ weeks === 15 ? true : false }
+            onClick={ () => { 
               setWeeks(15);
               setDataSource(fifteenWeekSemester);
-            }
-          }>
+            }}
+          >
             Para cursos de 15 semanas
           </Button>
-          <Button onClick={ () => { 
+          <Button 
+            active={ weeks === 18 ? true : false }
+            onClick={ () => { 
               setWeeks(18);
               setDataSource(eighteenWeekSemester);
-            }
-          }>
+            }}
+          >
             Para cursos de 18 semanas
           </Button>
         </ButtonContainer>
