@@ -18,7 +18,6 @@ const Reports: React.FC = () => {
                 <Report onClick={ () => setModalVisibility(true) }>Comprovante de Matrícula</Report>
                 <Report onClick={ () => setModalVisibility(true) }>Histórico Escolar Com IRA</Report>
                 <Report onClick={ () => setModalVisibility(true) }>Histórico Integralização</Report>
-                <Report onClick={ () => setModalVisibility(true) }>Solicitação de Matricula</Report>
 
                 { modalVisibility && (
                     <PopUp setModalVisibility={ setModalVisibility } large={ true }>
