@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../../components/Header';
-import { DownloadOutlined, WarningOutlined, PlusOutlined, CloseOutlined } from '@ant-design/icons';
+import { WarningOutlined, WarningOutlined, PlusOutlined, CloseOutlined } from '@ant-design/icons';
 
 import PopUp from './../../components/PopUp';
 import { Container, AvailableContainer, SubjectsContainer, Title, Description, SubjectAvailable, SubjectTitle, SubjectTeacher, SubjectHours, SubjectCode, SubjectsList, SubjectStatus, NoSubjects, ButtonsContainer, Button, FlexContainer, SubjectData, TableContainer, TableHeader, ActionButton } from './styles';
@@ -177,7 +177,7 @@ const Enrollment: React.FC = () => {
                     </AvailableContainer>
                 ) : (
                     <UnavailableContainer>
-                        <DownloadOutlined />
+                        <WarningOutlined />
                         <h3>Atenção!</h3>
                         <p>O período para solicitação ou ajuste de matrícula não está aberto.</p>
                     </UnavailableContainer>
