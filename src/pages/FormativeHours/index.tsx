@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { UploadOutlined } from '@ant-design/icons';
 
 import { Container, NormativeHoursContainer, HoursSum, SubmitButton, NormativeHeader } from './styles';
-import Normative from '../../components/Normative';
+import Normative from '../../components/Formative';
 import Header from '../../components/Header';
 import PopUp from '../../components/PopUp';
 
 import normativeHoursMock from '../../utils/normativeHoursMockData';
-import { NormativeHour } from './../../components/Normative';
+import { NormativeHour } from '../../components/Formative';
 import { FormContainer, Label, Input, FileInput, FakeLabel, Button } from '../../styles/global';
 
-const NormativeHours: React.FC = () => {
+const FormativeHours: React.FC = () => {
   const [ normativeSum, setNormativeSum ] = useState(0);
   const [ modalVisibility, setModalVisibility ] = useState(false);
 
@@ -30,15 +30,15 @@ const NormativeHours: React.FC = () => {
       <Container className="container">
         <NormativeHeader>
           <HoursSum>
-            Somatório das horas normativas: <span>{ normativeSum }</span>
+            Somatório das horas formativas: <span>{ normativeSum }</span>
           </HoursSum>
           <SubmitButton onClick={ () => setModalVisibility(true) }>
-            Adicionar Hora Normativa
+            Adicionar Hora Formativa
           </SubmitButton>
         </NormativeHeader>
 
         { modalVisibility && (
-          <PopUp setModalVisibility={ setModalVisibility } title='Adicionar hora normativa'>
+          <PopUp setModalVisibility={ setModalVisibility } title='Adicionar hora formativa'>
             <FormContainer>
               <Label htmlFor="name">
                 Nome
@@ -74,4 +74,4 @@ const NormativeHours: React.FC = () => {
   );
 }
 
-export default NormativeHours;
+export default FormativeHours;

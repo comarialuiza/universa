@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../../components/Header';
-import { WarningOutlined, WarningOutlined, PlusOutlined, CloseOutlined } from '@ant-design/icons';
+import { WarningOutlined, PlusOutlined, CloseOutlined } from '@ant-design/icons';
 
 import PopUp from './../../components/PopUp';
 import { Container, AvailableContainer, SubjectsContainer, Title, Description, SubjectAvailable, SubjectTitle, SubjectTeacher, SubjectHours, SubjectCode, SubjectsList, SubjectStatus, NoSubjects, ButtonsContainer, Button, FlexContainer, SubjectData, TableContainer, TableHeader, ActionButton } from './styles';

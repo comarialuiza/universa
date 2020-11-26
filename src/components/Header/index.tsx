@@ -29,9 +29,9 @@ const Header: React.FC = () => {
                         Calendário
                     </NavigationLink>
 
-                    <NavigationLink activeClassName="activeLink" to="/horasnormativas">
+                    <NavigationLink activeClassName="activeLink" to="/horasformativas">
                         <ProjectOutlined />
-                        Horas Normativas
+                        Horas Formativas
                     </NavigationLink>
 
                     <NavigationLink activeClassName="activeLink" to="/semestreatual">

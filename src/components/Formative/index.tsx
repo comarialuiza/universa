@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import PopUp from './../PopUp';
+import PopUp from '../PopUp';
 import { Container, Title, Hours, Button } from './styles';
-import { PDFViewer, PDFDownload } from './../../styles/global';
+import { PDFViewer, PDFDownload } from '../../styles/global';
 
-import certificate from './../../assets/images/certificate.pdf';
+import certificate from '../../assets/images/certificate.pdf';
 export interface NormativeHour {
     id: string;
     title: string;
@@ -16,7 +16,7 @@ interface Props {
     normative: NormativeHour;
 }
 
-const Normative: React.FC<Props> = ({ normative }) => {
+const Formative: React.FC<Props> = ({ normative }) => {
     const [ modalVisibility, setModalVisibility ] = useState(false);
 
     return (
@@ -35,4 +35,4 @@ const Normative: React.FC<Props> = ({ normative }) => {
     );
 }
 
-export default Normative;
+export default Formative;
